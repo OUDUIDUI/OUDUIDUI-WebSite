@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">OUDUIDUI-website</h1>
+      <h1 class="title">OUDUIDUI</h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -25,15 +25,9 @@
   </div>
 </template>
 
-<!--<script lang="ts">-->
-<!--import Vue from 'vue'-->
-
-<!--export default Vue.extend({-->
-<!--  data(){-->
-<!--    -->
-<!--  }-->
-<!--})-->
-<!--</script>-->
+<script>
+export default {}
+</script>
 
 <style>
 .container {
