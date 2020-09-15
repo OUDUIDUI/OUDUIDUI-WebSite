@@ -24,7 +24,8 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
   },
   /*
    ** Global CSS
@@ -45,7 +46,6 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
   ],
   /*
    ** Nuxt.js modules
