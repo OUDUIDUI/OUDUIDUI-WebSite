@@ -6,25 +6,13 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint": "yarn lint:js",
-    "test": "jest"
+    "generate": "nuxt generate"
   },
   "dependencies": {
-    "ant-design-vue": "^1.6.4",
-    "lottie-web": "^5.7.3",
-    "nuxt": "^2.14.0"
+    "bootstrap": "^4.5.2",
+    "bootstrap-vue": "^2.17.3",
+    "core-js": "^3.6.5",
+    "nuxt": "^2.14.6"
   },
-  "devDependencies": {
-    "@nuxtjs/eslint-config": "^3.1.0",
-    "@nuxtjs/eslint-module": "^2.0.0",
-    "@vue/test-utils": "^1.0.3",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "^26.1.0",
-    "jest": "^26.1.0",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^10.0.2",
-    "vue-jest": "^3.0.4"
-  }
+  "devDependencies": {}
 }
