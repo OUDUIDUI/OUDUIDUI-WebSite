@@ -1,0 +1,98 @@
+.container{
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.slogan{
+  font-weight: 100;
+  font-size: 45px;
+}
+
+.slogan div{
+  letter-spacing: 8px;
+}
+
+.slogan div:last-child{
+  margin-right: -8px;
+}
+
+.title{
+  padding-top: 20px;
+}
+
+.title span{
+  font-weight: 100;
+  font-size: 80px;
+  letter-spacing: 10px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .slogan{
+    font-size: 30px;
+  }
+
+  .slogan div{
+    letter-spacing: 6px;
+  }
+
+  .slogan div:last-child{
+    margin-right: -6px;
+  }
+
+  .title span{
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slogan{
+    font-size: 25px;
+  }
+
+  .slogan div{
+    letter-spacing: 4px;
+  }
+
+  .slogan div:last-child{
+    margin-right: -4px;
+  }
+
+  .title span{
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container{
+    flex-direction: column-reverse;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+  }
+
+  .slogan{
+    font-size: 14px;
+  }
+
+  .slogan div{
+    letter-spacing: 2px;
+  }
+
+  .slogan div:last-child{
+    margin-right: -2px;
+  }
+
+  .title{
+    padding-top: 0;
+  }
+
+
+  .title span{
+    font-size: 40px;
+  }
+}
