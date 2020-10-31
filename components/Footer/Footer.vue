@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column align-items-center footer">
+  <footer class="d-flex flex-column align-items-center footer">
     <div class="line" />
     <div class="container d-flex flex-column align-items-end">
       <p>© 2020 ouduidui.cn, All Rights Reserved</p>
@@ -7,7 +7,7 @@
         粤ICP备19153295号
       </a>
     </div>
-  </div>
+  </footer>
 </template>
 
 <style scoped>

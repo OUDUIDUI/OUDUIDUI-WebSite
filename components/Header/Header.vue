@@ -1,5 +1,5 @@
 <template>
-  <div class="container d-flex">
+  <header class="container d-flex">
     <div class="slogan d-flex flex-row
     justify-content-between user-select-none">
       <div>MAY</div>
@@ -13,7 +13,7 @@
     <div class="text-center title user-select-none">
       <span>OUDUIDUI</span>
     </div>
-  </div>
+  </header>
 </template>
 
 <script src="./Header.js"></script>
