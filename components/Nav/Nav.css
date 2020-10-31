@@ -31,12 +31,26 @@
 }
 
 .pc .row div img:first-child{
-  margin-left: 3vw;
+  margin-left: 2.5vw;
 }
 
 .pc .row div img:last-child{
-  margin-right: 3vw;
+  margin-right: 2.5vw;
 }
+
+.focus{
+  cursor: pointer;
+}
+
+.qr-code{
+  width: 250px;
+}
+
+.modal-text{
+  font-size: 21px;
+  font-weight: 200;
+}
+
 
 @media screen and (max-width: 992px) {
   .pc .row div img:first-child{
@@ -100,7 +114,7 @@
     padding-top: 30px;
     padding-bottom: 30px;
     border-left: 1px solid #333;
-    z-index: 99999;
+    z-index: 999;
     transition: all .8s ease-in-out;
   }
 
@@ -153,6 +167,15 @@
     z-index: 100;
     pointer-events: all;
     opacity: 1;
+  }
+
+  .qr-code{
+    width: 150px;
+  }
+
+  .modal-text{
+    font-size: 14px;
+    font-weight: 200;
   }
 }
 
