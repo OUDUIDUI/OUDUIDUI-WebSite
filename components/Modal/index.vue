@@ -9,6 +9,6 @@
   </div>
 </template>
 
-<script src="./Modal.js"></script>
+<script src="./index.js"></script>
 
-<style src="./Modal.css" scoped></style>
+<style src="./index.css" scoped></style>

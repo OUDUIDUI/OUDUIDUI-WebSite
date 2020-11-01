@@ -25,7 +25,7 @@
                @click="checkoutRoute(3)">
             <span>关于</span>
           </div>
-          <div class="col-sm text-center d-flex justify-content-between">
+          <div class="col-sm text-center d-flex align-items-center justify-content-between">
             <img src="~/static/icon/nav/github.svg"
                  @click="contentMe('github')"
                  alt="github" class="focus">
@@ -103,6 +103,6 @@
   </div>
 </template>
 
-<script src="./Nav.js"></script>
+<script src="./index.js"></script>
 
-<style src="./Nav.css" scoped></style>
+<style src="./index.css" scoped></style>

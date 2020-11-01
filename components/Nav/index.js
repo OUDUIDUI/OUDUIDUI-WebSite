@@ -1,4 +1,4 @@
-import Modal from '~/components/Modal/Modal.vue'
+import Modal from '~/components/Modal/index.vue'
 
 export default {
   name: 'Nav',

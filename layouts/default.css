@@ -26,7 +26,7 @@ a,a:link,a:visited,a:hover,a:active{
 .nuxt{
   flex: 1;
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
 }
 
 .page{
@@ -48,4 +48,8 @@ a,a:link,a:visited,a:hover,a:active{
 /* 公有样式 */
 .text-red{
   color: #F05454;
+}
+
+.box-border{
+  border: 2px solid #333;
 }

@@ -28,6 +28,7 @@
 .pc .row div img{
   display: block;
   width: 18px;
+  height: 18px;
 }
 
 .pc .row div img:first-child{
@@ -65,14 +66,15 @@
 @media screen and (max-width: 768px) {
   .pc .row div img{
     width: 14px;
+    height: 14px;
   }
 
   .pc .row div img:first-child{
-    margin-left: 5px;
+    margin-left: 10px;
   }
 
   .pc .row div img:last-child{
-    margin-right: 5px;
+    margin-right: 10px;
   }
 }
 
@@ -106,6 +108,7 @@
   .mobile .left img{
     display: block;
     width: 8vw;
+    height: 8vw;
     margin-right: 25px;
   }
 

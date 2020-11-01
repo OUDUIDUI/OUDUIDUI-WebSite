@@ -16,6 +16,6 @@
   </header>
 </template>
 
-<script src="./Header.js"></script>
+<script src="./index.js"></script>
 
-<style src="./Header.css" scoped></style>
+<style src="./index.css" scoped></style>
