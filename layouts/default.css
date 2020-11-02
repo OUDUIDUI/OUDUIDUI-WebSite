@@ -53,3 +53,17 @@ a,a:link,a:visited,a:hover,a:active{
 .box-border{
   border: 2px solid #333;
 }
+
+@font-face {
+  font-family: 'oppoSan-L';
+  src: url('~static/font/OPPOSans-L-2.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'oppoSan-B';
+  src: url('~static/font/OPPOSans-B-2.ttf');
+  font-weight: normal;
+  font-style: normal;
+}

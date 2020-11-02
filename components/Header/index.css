@@ -5,8 +5,8 @@
 }
 
 .slogan{
-  font-weight: 100;
   font-size: 45px;
+  font-family: 'oppoSan-L';
 }
 
 .slogan div{
@@ -22,7 +22,7 @@
 }
 
 .title span{
-  font-weight: 100;
+  font-family: 'oppoSan-B';
   font-size: 80px;
   letter-spacing: 10px;
   margin-left: 10px;
@@ -93,6 +93,6 @@
 
 
   .title span{
-    font-size: 40px;
+    font-size: 36px;
   }
 }

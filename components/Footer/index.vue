@@ -23,8 +23,8 @@
 }
 
 p,a{
+  font-family: 'oppoSan-L';
   font-size: 14px;
-  font-weight: 300;
   margin: 0;
 }
 

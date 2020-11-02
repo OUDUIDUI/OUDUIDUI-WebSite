@@ -15,6 +15,8 @@ export default {
     checkoutRoute(i){
       this.routeIndex = i;
       this.isNavToggle = false;
+      const paths = ['/','/blog','/','/'];
+      this.$router.push(paths[i]);
     },
     contentMe(type){
       switch (type){
