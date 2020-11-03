@@ -18,6 +18,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    '~/plugins/axios'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -37,12 +38,14 @@ export default {
   ],
 
   axios: {
-    proxy: true
+    proxy: true,
+    prefix: '/ouduiduiApi', // baseURL
+    credentials: true,
   },
 
   proxy: {
     '/ouduiduiApi': {
-      target: 'http://127.0.0.1:5000',
+      target: 'http://localhost:5000',
       pathRewrite: {
         '^/ouduiduiApi' : '/'
       }
