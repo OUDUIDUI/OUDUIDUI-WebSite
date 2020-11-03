@@ -1,3 +1,8 @@
+import BlogNav from '@/components/BlogNav/BlogNav.vue'
+
 export default {
-  name: "index"
+  name: "index",
+  components:{
+    BlogNav
+  },
 }

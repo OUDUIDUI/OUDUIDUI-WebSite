@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    博客
+  <!--   导航   -->
+    <BlogNav />
   </div>
 </template>
 
