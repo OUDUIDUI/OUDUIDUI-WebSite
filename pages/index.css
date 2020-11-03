@@ -4,6 +4,7 @@
 
 .photo img{
   width: 30vw;
+  height: 37.27vw;
 }
 
 .photo .summary{
@@ -49,12 +50,14 @@
 @media screen and (max-width: 768px) {
   .photo img{
     width: 40vw;
+    height: 39.69vw;
   }
 }
 
 @media screen and (max-width: 576px) {
   .photo img{
     width: 60vw;
+    height: 74.53vw;
   }
 
   .photo{
