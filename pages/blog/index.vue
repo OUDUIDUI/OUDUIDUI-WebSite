@@ -1,12 +1,14 @@
 <template>
   <div class="container">
     <!--   导航   -->
-    <BlogNav />
+    <BlogNav @search="search" @checkoutNav="checkoutNav"
+             :navs="navs" :need-search="true" />
 
     <!--   博客列表   -->
     <div>
       <BlogList :blog-list="blogs" />
     </div>
+    <div class="tips" v-if="tip">{{tip}}</div>
 
     <!--   页码   -->
     <Pagination

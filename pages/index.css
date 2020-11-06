@@ -7,6 +7,10 @@
   height: 37.27vw;
 }
 
+.box-border{
+  border: 2px solid #333;
+}
+
 .photo .summary{
   bottom: 0;
   right: -160px;

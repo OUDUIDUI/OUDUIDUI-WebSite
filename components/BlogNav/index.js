@@ -1,12 +1,17 @@
 export default {
   name: "BlogNav",
+  props:{
+    navs:{
+      type:Array,
+      required: true
+    },
+    needSearch:{
+      type:Boolean,
+      default: false
+    }
+  },
   data(){
     return{
-      navs:[
-        {id:0,label:'全部'},
-        {id:1,label:'编程'},
-        {id:2,label:'设计剪辑'}
-      ],
       activeIndex: 0,
       isOpenNav:false,
 
@@ -21,6 +26,7 @@ export default {
         this.searchContent = '';
       }
     },
+
     navAnimation(){
       this.isOpenNav = !this.isOpenNav;
     },
@@ -28,6 +34,11 @@ export default {
     checkoutNav(i){
       this.activeIndex = i;
       this.isOpenNav = false;
+      this.$emit('checkoutNav',this.navs[i])
+    },
+
+    search(){
+      this.$emit('search',this.searchContent)
     }
   }
 }

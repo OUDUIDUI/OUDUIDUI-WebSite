@@ -9,6 +9,22 @@ export default {
   components:{
     BlogNav,BlogList,Pagination
   },
+  computed:{
+    tip(){
+      if(!this.blogs.length && this.query.keyword){
+        return '暂无搜索结果。'
+      }
+    }
+  },
+  data(){
+    return{
+      navs:[
+        {id:0,label:'全部'},
+        {id:1,label:'编程'},
+        {id:2,label:'设计剪辑'}
+      ],
+    }
+  },
   async asyncData({$axios}){
     const query = {limit:10};
     const method = apiList.blog.list.method;
@@ -25,6 +41,7 @@ export default {
   },
   methods:{
     async getAllData(){
+      this.query.limit = 10;
       const method = apiList.blog.list.method;
       let url = apiList.blog.list.url + '?' + qs.stringify(this.query);
       const {data} = await this.$axios[method](url);
@@ -34,9 +51,21 @@ export default {
         this.pagination = data.pagination
       }
     },
+    // 翻页
     async togglePage(page){
-      this.query.page = page;
+      this.query = {page};
       await this.getAllData();
+    },
+
+    // 搜索
+    async search(keyword){
+      this.query = {keyword};
+      await this.getAllData();
+    },
+
+    // 切换类型
+    checkoutNav(nav){
+      console.log(nav);
     }
   }
 }

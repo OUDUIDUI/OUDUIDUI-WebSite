@@ -29,12 +29,13 @@
     </div>
 
     <!--  search  -->
-    <div class="search align-items-center"
+    <div class="search align-items-center" v-if="needSearch"
          :class="isOpenSearch ? 'active' : ''">
       <img src="~/static/icon/blog/search.svg"
            alt="search" @click="searchAnimation(true)">
       <input type="text" v-if="isOpenSearch"
-             placeholder="Search..." v-model="searchContent" />
+             placeholder="Search..." v-model="searchContent"
+             @keyup.enter="search"/>
       <img src="~/static/icon/blog/x.svg"
            @click="searchAnimation(false)"
            alt="close"
