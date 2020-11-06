@@ -11,13 +11,26 @@ export default {
       routeIndex:0
     }
   },
+  mounted() {
+    this.initRouteIndex();
+  },
   methods:{
+    initRouteIndex(){
+      const fullPath = this.$route.fullPath;
+      if(fullPath.includes('blog')){
+        this.routeIndex = 1;
+      }else {
+        this.routeIndex = 0;
+      }
+    },
+
     checkoutRoute(i){
       this.routeIndex = i;
       this.isNavToggle = false;
       const paths = ['/','/blog','/','/'];
       this.$router.push(paths[i]);
     },
+
     contentMe(type){
       switch (type){
         case 'github':

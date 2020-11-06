@@ -1,7 +1,7 @@
 <template>
-  <div class="box-border item">
+  <div class="box-border item user-select-none">
     <div class="header d-flex align-items-center">
-      <div class="updated-time">{{updatedAt}}</div>
+      <div class="updated-time user-select-none">{{updatedAt}}</div>
       <div class="info d-flex align-items-center">
         <div class="d-flex align-items-center">
           <img src="~/static/icon/blog/like.svg" alt="likes">

@@ -1,5 +1,5 @@
 <template>
-  <nav class="d-flex justify-content-between">
+  <nav class="d-flex justify-content-between user-select-none">
     <!--  navs PC   -->
     <div class="navs-pc">
       <div v-for="(nav,i) in navs" :key="i" @click="checkoutNav(nav.id)"

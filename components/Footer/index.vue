@@ -1,5 +1,5 @@
 <template>
-  <footer class="d-flex flex-column align-items-center footer">
+  <footer class="d-flex flex-column align-items-center user-select-none footer">
     <div class="line" />
     <div class="container d-flex flex-column align-items-end">
       <p>© 2020 ouduidui.cn, All Rights Reserved</p>

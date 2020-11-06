@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="user-select-none">
     <!--  PC NAV  -->
     <div class="pc">
       <div class="d-flex flex-column align-items-center">
@@ -8,22 +8,22 @@
           <div class="col-sm text-center focus"
                :class="routeIndex === 0 ? 'text-red' : ''"
                @click="checkoutRoute(0)">
-            <span>我</span>
+            <span class="user-select-none">我</span>
           </div>
           <div class="col-sm text-center focus"
                :class="routeIndex === 1 ? 'text-red' : ''"
                @click="checkoutRoute(1)">
-            <span>博客</span>
+            <span class="user-select-none">博客</span>
           </div>
           <div class="col-sm text-center focus"
                :class="routeIndex === 2 ? 'text-red' : ''"
                @click="checkoutRoute(2)">
-            <span>作品</span>
+            <span class="user-select-none">作品</span>
           </div>
           <div class="col-sm text-center focus"
                :class="routeIndex === 3 ? 'text-red' : ''"
                @click="checkoutRoute(3)">
-            <span>关于</span>
+            <span class="user-select-none">关于</span>
           </div>
           <div class="col-sm text-center d-flex align-items-center justify-content-between">
             <img src="~/static/icon/nav/github.svg"
