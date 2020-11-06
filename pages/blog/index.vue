@@ -3,10 +3,15 @@
     <!--   导航   -->
     <BlogNav />
 
-    <!--   博客   -->
+    <!--   博客列表   -->
     <div>
       <BlogList :blog-list="blogs" />
     </div>
+
+    <!--   页码   -->
+    <Pagination
+      @togglePage="togglePage"
+      :pagination="pagination" v-if="pagination.pages > 1"  />
   </div>
 </template>
 

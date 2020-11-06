@@ -21,6 +21,14 @@ export default {
   mounted() {
     this.initList();
   },
+  watch:{
+    blogList(){
+      this.leftList = [];
+      this.rightList = [];
+      this.heights = [];
+      this.initList();
+    }
+  },
   methods:{
     initList(){
       for(let blog of this.blogList){
