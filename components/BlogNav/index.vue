@@ -16,7 +16,7 @@
         <p :class="isOpenNav ? 'text-red' : ''">
           {{navs[activeIndex].label}}
         </p>
-        <img src="~/static/image/blog/left.svg"
+        <img src="~/static/icon/blog/left.svg"
              alt="down" class="down-icon">
       </div>
       <div class="dropdown-box" v-if="isOpenNav">
@@ -31,11 +31,11 @@
     <!--  search  -->
     <div class="search align-items-center"
          :class="isOpenSearch ? 'active' : ''">
-      <img src="~/static/image/blog/search.svg"
+      <img src="~/static/icon/blog/search.svg"
            alt="search" @click="searchAnimation(true)">
       <input type="text" v-if="isOpenSearch"
              placeholder="Search..." v-model="searchContent" />
-      <img src="~/static/image/blog/x.svg"
+      <img src="~/static/icon/blog/x.svg"
            @click="searchAnimation(false)"
            alt="close"
            v-if="isOpenSearch">
@@ -43,6 +43,6 @@
   </nav>
 </template>
 
-<script src="./BlogNav.js"></script>
+<script src="./index.js"></script>
 
-<style src="./BlogNav.css" scoped></style>
+<style src="./index.css" scoped></style>

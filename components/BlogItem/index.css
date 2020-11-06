@@ -1,0 +1,33 @@
+.item{
+  width: 100%;
+  padding: 20px 30px;
+}
+
+.header{
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.updated-time{
+  flex: 1;
+}
+
+.info img{
+  width: 24px;
+  height: 24px;
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
+.title{
+  font-size: 30px;
+  font-weight: 400;
+  padding-top: 10px;
+  line-height: 1.8;
+}
+
+.author{
+  font-size: 18px;
+  font-weight: 200;
+  text-align: right;
+}
