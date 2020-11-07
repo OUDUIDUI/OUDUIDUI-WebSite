@@ -36,6 +36,17 @@
   text-align: right;
 }
 
+.tag{
+  border: 1px solid #333;
+  font-size: 12px;
+  font-weight: 300;
+  padding: 0 15px;
+  line-height: 26px;
+  border-radius: 13px;
+  margin-right: 8px;
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 576px) {
   .item{
     padding: 15px 20px;

@@ -1,3 +1,5 @@
+import moment from 'moment'
+
 export default {
   name: "index",
   props:{
@@ -15,9 +17,14 @@ export default {
       if(days >= 1 && days <= 7){
         return Math.floor(days) + '天前'
       }else if(days < 1){
-        return Math.floor(timeDifference / (3600*1000)) + '小时前'
+        const time = Math.floor(timeDifference / (3600*1000));
+        if(time){
+          return Math.floor(timeDifference / (3600*1000)) + '小时前'
+        }else {
+          return '刚刚'
+        }
       }else {
-        return updatedAt;
+        return moment(updatedAt).format("YYYY-MM-DD");
       }
     }
   }
