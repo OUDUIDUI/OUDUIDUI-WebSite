@@ -23,6 +23,7 @@ export default {
         {id:1,label:'编程'},
         {id:2,label:'设计剪辑'}
       ],
+      isAllList:true
     }
   },
   async asyncData({$axios}){
@@ -65,7 +66,7 @@ export default {
 
     // 切换类型
     checkoutNav(nav){
-      console.log(nav);
+      this.isAllList = nav.id === 0;
     }
   }
 }

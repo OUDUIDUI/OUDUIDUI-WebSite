@@ -52,6 +52,10 @@ export default {
     }
   },
 
+  env:{
+    PATH_TYPE: process.env.PATH_TYPE
+  },
+
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   }

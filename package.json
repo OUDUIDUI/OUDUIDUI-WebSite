@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
+    "dev": "cross-env PATH_TYPE=development nuxt",
+    "build": "cross-env PATH_TYPE=production nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
@@ -14,6 +14,7 @@
     "bootstrap": "^4.5.2",
     "bootstrap-vue": "^2.17.3",
     "core-js": "^3.6.5",
+    "cross-env": "^7.0.2",
     "moment": "^2.29.1",
     "nuxt": "^2.14.6",
     "nuxt-vuex-localstorage": "^1.2.7",

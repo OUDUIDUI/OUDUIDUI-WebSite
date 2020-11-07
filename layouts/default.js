@@ -2,6 +2,7 @@ import Header from '~/components/Header/index.vue'
 import Nav from '~/components/Nav/index.vue'
 import Footer from '~/components/Footer/index.vue'
 import {mapState } from 'vuex'
+import env from '@/utils/env'
 
 export default {
   name: "default",
@@ -16,5 +17,6 @@ export default {
   mounted() {
     // 生成cid
     if(!this.cid) this.$store.commit('getCid');
+    console.log(env);
   }
 }

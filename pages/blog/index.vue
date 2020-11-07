@@ -5,7 +5,7 @@
              :navs="navs" :need-search="true" />
 
     <!--   博客列表   -->
-    <div>
+    <div v-if="isAllList">
       <BlogList :blog-list="blogs" />
     </div>
     <div class="tips" v-if="tip">{{tip}}</div>
