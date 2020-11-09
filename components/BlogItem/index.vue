@@ -1,5 +1,5 @@
 <template>
-  <div class="box-border item user-select-none">
+  <div class="box-border item user-select-none" @click="toBlogDetail">
     <div class="header d-flex align-items-center">
       <!--   更新时间   -->
       <div class="updated-time user-select-none">{{updatedAt}}</div>

@@ -14,7 +14,12 @@ export default {
       node.isDown = !node.isDown;
     },
     toBlogDetail(id){
-
+      this.$router.push({
+        path:'/blog/detail',
+        query:{
+          blogId:id
+        }
+      })
     }
   }
 }

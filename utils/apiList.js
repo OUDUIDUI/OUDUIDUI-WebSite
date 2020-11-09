@@ -9,6 +9,10 @@ export default {
     category:{
       method: 'get',
       url: configApi + '/api/v1/blog/category/{id}'
+    },
+    detail:{
+      method:'get',
+      url: configApi + '/api/v1/blog/{id}'
     }
   }
 }

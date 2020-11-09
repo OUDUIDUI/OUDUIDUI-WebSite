@@ -27,5 +27,15 @@ export default {
         return moment(updatedAt).format("YYYY-MM-DD");
       }
     }
+  },
+  methods:{
+    toBlogDetail(){
+      this.$router.push({
+        path:'/blog/detail',
+        query:{
+          blogId:this.blog._id
+        }
+      })
+    }
   }
 }
