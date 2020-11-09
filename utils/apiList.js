@@ -5,6 +5,10 @@ export default {
     list:{
       method:'get',
       url: configApi + '/api/v1/blog'
+    },
+    category:{
+      method: 'get',
+      url: configApi + '/api/v1/blog/category/{id}'
     }
   }
 }

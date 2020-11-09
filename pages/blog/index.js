@@ -1,13 +1,16 @@
 import BlogNav from '@/components/BlogNav/index.vue'
 import BlogList from '@/components/BlogList/index.vue'
 import Pagination from '@/components/Pagination/index.vue'
+import BlogCategory from '@/components/BlogCategory/index.vue'
 import apiList from '@/utils/apiList'
 import qs from 'qs'
+import moment from 'moment'
+import env from '@/utils/env'
 
 export default {
   name: "index",
   components:{
-    BlogNav,BlogList,Pagination
+    BlogNav,BlogList,Pagination,BlogCategory
   },
   computed:{
     tip(){
@@ -23,7 +26,9 @@ export default {
         {id:1,label:'编程'},
         {id:2,label:'设计剪辑'}
       ],
-      isAllList:true
+      showNavIndex:0,
+      ITCategory:'',
+      UICategory:''
     }
   },
   async asyncData({$axios}){
@@ -39,6 +44,10 @@ export default {
         blogs:data.data
       }
     }
+  },
+  async mounted() {
+    this.ITCategory = await this.getCategoryList(env.BLOG_IT_ID);
+    this.UICategory = await this.getCategoryList(env.BLOG_UI_ID);
   },
   methods:{
     async getAllData(){
@@ -62,11 +71,44 @@ export default {
     async search(keyword){
       this.query = {keyword};
       await this.getAllData();
+      this.$refs.blogNav.checkoutNav(0);
+    },
+
+    // 初始化数据
+    async initList(){
+      this.query = {};
+      await this.getAllData();
     },
 
     // 切换类型
     checkoutNav(nav){
-      this.isAllList = nav.id === 0;
+      this.showNavIndex = nav.id;
+      this.query = {};
+    },
+
+    // 获取分类目录
+    async getCategoryList(id){
+      const method = apiList.blog.category.method;
+      let url = apiList.blog.category.url.replace('{id}',id)
+      const {data} = await this.$axios[method](url);
+
+      if(data.success){
+        this.formatCategory(data.category)
+        return {category:data.category,articles:data.articles}
+      }
+    },
+
+    // 处理分类目录数据
+    formatCategory(category){
+      category.forEach(item => {
+        item.isDown = true;
+        if(item.updatedAt){
+          item.updatedAt = moment(item.updatedAt).format("YYYY-MM-DD");
+        }
+        if(item.children){
+          this.formatCategory(item.children)
+        }
+      })
     }
   }
 }

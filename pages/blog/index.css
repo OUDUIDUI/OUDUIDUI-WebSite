@@ -3,3 +3,13 @@
   font-weight: 200;
   text-align: center;
 }
+
+.category{
+  padding: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .category{
+    padding: 20px;
+  }
+}

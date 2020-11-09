@@ -17,11 +17,18 @@ export default {
 
       searchContent:'',
       isOpenSearch: false,
+
+      isSearch:false
     }
   },
   methods:{
     searchAnimation(isOpenSearch){
       this.isOpenSearch = isOpenSearch;
+      if(this.isSearch && this.searchContent){
+        this.isSearch = false;
+        this.$emit('closeSearch')
+      }
+
       if(!isOpenSearch){
         this.searchContent = '';
       }
@@ -32,13 +39,16 @@ export default {
     },
 
     checkoutNav(i){
-      this.activeIndex = i;
-      this.isOpenNav = false;
-      this.$emit('checkoutNav',this.navs[i])
+      if(this.activeIndex !== i){
+        this.activeIndex = i;
+        this.isOpenNav = false;
+        this.$emit('checkoutNav',this.navs[i])
+      }
     },
 
     search(){
-      this.$emit('search',this.searchContent)
+      this.isSearch = true;
+      this.$emit('search',this.searchContent);
     }
   }
 }
