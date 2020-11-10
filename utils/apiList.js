@@ -14,6 +14,10 @@ export default {
       method:'get',
       url: configApi + '/api/v1/blog/{id}'
     },
+    like:{
+      method:'put',
+      url: configApi + '/api/v1/blog/likes/{id}'
+    },
     comment:{
       create:{
         method:'post',

@@ -97,6 +97,7 @@ export default {
     }
   },
   methods:{
+    // 评论
     async comment(){
       const method = apiList.blog.comment.create.method;
       let url = apiList.blog.comment.create.url;
@@ -118,6 +119,7 @@ export default {
       }
     },
 
+    // 获取评论列表
     async getComment(){
       const method = apiList.blog.comment.list.method;
       let url = apiList.blog.comment.list.url.replace("{id}",this.blog._id);
@@ -209,6 +211,31 @@ export default {
         }else {
           this.toggleAlert('删除失败',true);
           this.deleteCommentInfo.email = '';
+        }
+      }
+    },
+
+    // 点赞
+    async likes(){
+      if(!this.cid){
+        this.$store.commit('getCid');
+      }
+
+      if(this.blog.likes.includes(this.cid)){
+        this.toggleAlert('你已经点赞过啦，感谢！');
+      }else {
+        const method = apiList.blog.like.method;
+
+        let url = apiList.blog.like.url
+          .replace("{id}",this.blog._id);
+        const {data} = await this.$axios[method](url,{
+          cid:this.cid
+        });
+        if (data.success){
+          this.toggleAlert('感谢你的点赞！');
+          this.blog.likes.push(this.cid);
+        }else {
+          this.toggleAlert(data.message,true)
         }
       }
     },
