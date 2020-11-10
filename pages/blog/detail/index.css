@@ -1,0 +1,237 @@
+.title{
+  font-size: 50px;
+  font-weight: 200;
+  text-align: center;
+}
+
+.author{
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.tag-title{
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 300;
+}
+
+.tag{
+  font-weight: 200;
+  font-size: 16px;
+  border: 1px solid #333;
+  line-height: 25px;
+  padding: 0 15px;
+  border-radius: 13px;
+  margin-right: 5px;
+}
+
+.content{
+  margin: 50px 0;
+}
+
+.reading{
+  margin-right: 25px;
+}
+
+.reading img,.likes img{
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+}
+
+.reading div,.likes div{
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.comments{
+  margin-top: 20px;
+}
+
+.comment-area{
+  border: 1px solid #333;
+}
+
+.comment-area textarea{
+  flex: 1;
+  font-size: 16px;
+  font-weight: 200;
+  padding: 10px;
+  border: none;
+  border-radius: 0;
+  resize:none;
+}
+
+.comment-area button{
+  width: 80px;
+  background: #fff;
+  color: #333;
+  border: none;
+  border-left: 1px solid #333;
+  font-size: 16px;
+  font-weight: 200;
+}
+.comment-area textarea:focus,
+.comment-area button:focus{
+  outline: none;
+}
+
+.check-userinfo{
+  width: 300px;
+}
+
+.modal-title{
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.modal-input{
+  width: 100%;
+  font-size: 18px;
+  font-weight: 200;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.modal-btn{
+  width: 100%;
+  font-size: 16px;
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+}
+
+.comment-list{
+  margin-top: 30px;
+}
+
+.comment-item{
+  border: 1px solid #333;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.comment-main{
+  padding: 0 10px;
+}
+
+.comment-name,.reply-name{
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.comment-content,.reply-content{
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 200;
+  text-indent: 40px;
+}
+
+.comment-btn{
+  cursor: pointer;
+}
+
+.comment-btn,.comment-createdAt{
+  padding-top: 10px;
+}
+
+.comment-btn,.comment-createdAt,.reply-createdAt{
+  text-align: right;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.reply{
+  border-top: 1px solid rgba(0,0,0,.3);
+  padding: 14px 10px 0;
+  margin-top: 14px;
+}
+
+@media screen and (max-width: 576px) {
+  .title{
+    font-size: 30px;
+  }
+
+  .author{
+    font-weight: 100;
+    font-size: 14px;
+  }
+
+  .tag-title{
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .tag{
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0 10px;
+    border-radius: 10px;
+  }
+
+  .content{
+    margin: 30px 0;
+  }
+
+  .reading{
+    margin-right: 16px;
+  }
+
+  .reading img,.likes img{
+    width: 14px;
+    height: 14px;
+  }
+
+  .reading div,.likes div{
+    font-size: 14px;
+  }
+
+  .check-userinfo{
+    width: 250px;
+  }
+
+  .comment-area textarea{
+    font-size: 14px;
+  }
+
+  .comment-area button{
+    font-size: 12px;
+  }
+
+  .comment-list{
+    margin-top: 30px;
+  }
+
+  .comment-item{
+    border: 1px solid #333;
+    margin-bottom: 10px;
+    padding: 15px;
+  }
+
+  .comment-name,.reply-name{
+    font-size: 14px;
+  }
+
+  .comment-content,.reply-content{
+    font-size: 14px;
+    text-indent: 28px;
+  }
+
+  .comment-btn,.comment-createdAt{
+    padding-top: 6px;
+  }
+
+  .comment-btn,.comment-createdAt,.reply-createdAt{
+    font-size: 12px;
+    font-weight: 100;
+  }
+
+  .reply{
+    padding: 10px 10px 0;
+    margin-top: 10px;
+  }
+}

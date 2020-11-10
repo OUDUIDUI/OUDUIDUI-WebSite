@@ -1,0 +1,162 @@
+/*  Table  */
+.markdown table {
+  font-size:18px;
+  color:#333;
+  border-width: 1px;
+  border-collapse: collapse;
+  margin:20px auto;
+  width: 80%;
+  font-weight: 300;
+}
+
+.markdown table th {
+  padding: 10px 20px;
+  border: 1px solid #333;
+}
+
+.markdown table td {
+  border: 1px solid #333;
+  padding: 10px 20px;
+}
+
+/*  Text  */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5{
+  font-weight: 400;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.markdown h1{
+  font-size: 30px;
+}
+
+.markdown h2{
+  font-size: 26px;
+}
+
+.markdown h3{
+  font-size: 24px;
+}
+
+.markdown h4{
+  font-size: 22px;
+}
+
+.markdown h5{
+  font-size: 20px;
+}
+
+.markdown p,.markdown ul,.markdown ol{
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.markdown ul,.markdown ol{
+  list-style-position: inside;
+  padding-left: 18px;
+}
+
+.markdown p{
+  text-indent: 36px;
+}
+
+/* Code */
+.markdown pre{
+  padding: 20px 30px;
+  border-radius: 5px;
+  background: #333333;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.markdown p code{
+  margin: 0 5px;
+}
+
+/* Image */
+.markdown img{
+  display: block;
+  max-width: 80%;
+  margin: 10px auto;
+}
+
+/* Blockquote */
+.markdown blockquote {
+  color: #333;
+  font-style: italic;
+  margin: 10px 30px;
+  padding-left: 14px;
+  border-left: 5px solid #dee2e4;
+}
+
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
+  .markdown table {
+    font-size:14px;
+    margin:20px auto;
+    width: 100%;
+    font-weight: 300;
+  }
+
+  .markdown h1,
+  .markdown h2,
+  .markdown h3,
+  .markdown h4,
+  .markdown h5{
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .markdown h1{
+    font-size: 24px;
+  }
+
+  .markdown h2{
+    font-size: 22px;
+  }
+
+  .markdown h3{
+    font-size: 20px;
+  }
+
+  .markdown h4{
+    font-size: 18px;
+  }
+
+  .markdown h5{
+    font-size: 16px;
+  }
+
+  .markdown p,.markdown ul,.markdown ol{
+    font-size: 14px;
+    font-weight: 200;
+  }
+
+  .markdown p{
+    text-indent: 28px;
+  }
+
+  .markdown ul,.markdown ol{
+    padding-left: 14px;
+  }
+
+  .markdown blockquote {
+    margin: 10px 10px;
+    padding-left: 0px;
+  }
+
+  .markdown img{
+    max-width: 100%;
+  }
+}

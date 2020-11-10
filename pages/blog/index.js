@@ -32,7 +32,7 @@ export default {
     }
   },
   async asyncData({$axios}){
-    const query = {limit:10};
+    const query = {limit:10,sort:'updatedAt'};
     const method = apiList.blog.list.method;
     let url = apiList.blog.list.url + '?' + qs.stringify(query);
     const {data} = await $axios[method](url);
@@ -52,6 +52,7 @@ export default {
   methods:{
     async getAllData(){
       this.query.limit = 10;
+      this.query.sort = 'updatedAt';
       const method = apiList.blog.list.method;
       let url = apiList.blog.list.url + '?' + qs.stringify(this.query);
       const {data} = await this.$axios[method](url);

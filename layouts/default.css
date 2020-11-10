@@ -32,7 +32,7 @@ a,a:link,a:visited,a:hover,a:active{
   color:inherit;
 }
 
-input:focus{
+input:focus,button:focus{
   outline: none;
 }
 

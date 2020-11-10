@@ -13,6 +13,20 @@ export default {
     detail:{
       method:'get',
       url: configApi + '/api/v1/blog/{id}'
+    },
+    comment:{
+      create:{
+        method:'post',
+        url: configApi + '/api/v1/blog/comment'
+      },
+      list:{
+        method:'get',
+        url:configApi + '/api/v1/blog/comment/{id}'
+      },
+      delete:{
+        method:'delete',
+        url:configApi + '/api/v1/blog/comment/{id}'
+      }
     }
   }
 }

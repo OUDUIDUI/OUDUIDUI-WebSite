@@ -15,6 +15,8 @@ export default {
   },
   mounted() {
     // 生成cid
-    if(!this.cid) this.$store.commit('getCid');
+    if(!this.cid){
+      this.$store.commit('getCid');
+    }
   }
 }
