@@ -25,7 +25,7 @@ export default {
   components:{
     Modal,Alert
   },
-  async asyncData({query,$axios}){
+  async asyncData({query,$axios,error}){
     const method = apiList.blog.detail.method;
     let url = apiList.blog.detail.url.replace("{id}",query.blogId);
     const {data} = await $axios[method](url);
@@ -67,6 +67,9 @@ export default {
         blog:data.blog,
         comments:data.comments
       }
+    }
+    else{
+      error({ statusCode: 404, message: 'Post not found' })
     }
   },
   computed:{

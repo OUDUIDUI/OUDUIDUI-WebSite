@@ -2,7 +2,7 @@
   <div class="user-select-none">
     <div v-for="(node,i) in category" :key="node._id">
       <div class="node d-flex align-items-center"
-           v-if="node.level === 'group'"
+           v-if="node.level === 'group' && node.children.length"
            @click="downList(node)">
         <img src="~/static/icon/blog/left.svg" v-if="node.isDown"
              alt="down" class="down-icon">

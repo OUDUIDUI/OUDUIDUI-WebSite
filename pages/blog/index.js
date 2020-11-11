@@ -31,7 +31,7 @@ export default {
       UICategory:''
     }
   },
-  async asyncData({$axios}){
+  async asyncData({$axios,error}){
     const query = {limit:10,sort:'updatedAt'};
     const method = apiList.blog.list.method;
     let url = apiList.blog.list.url + '?' + qs.stringify(query);
@@ -43,6 +43,9 @@ export default {
         pagination:data.pagination,
         blogs:data.data
       }
+    }
+    else{
+      error({ statusCode: 404, message: 'Post not found' })
     }
   },
   async mounted() {

@@ -9,6 +9,114 @@
   </div>
 </template>
 
-<script src="./default.js"></script>
+<script>
+  import Header from '~/components/Header/index.vue'
+  import Nav from '~/components/Nav/index.vue'
+  import Footer from '~/components/Footer/index.vue'
+  import {mapState } from 'vuex'
 
-<style src="./default.css"></style>
+  export default {
+    name: "default",
+    components:{
+      Header,
+      Nav,
+      Footer
+    },
+    computed:{
+      ...mapState(['cid'])
+    },
+    mounted() {
+      // 生成cid
+      if(!this.cid){
+        this.$store.commit('getCid');
+      }
+    }
+  }
+
+</script>
+
+<style>
+  html {
+    font-family:
+      'Source Sans Pro',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      'Helvetica Neue',
+      Arial,
+      sans-serif;
+    color: #333;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  p{
+    margin: 0;
+    padding: 0;
+  }
+
+  img{
+    display: block;
+  }
+
+  a,a:link,a:visited,a:hover,a:active{
+    text-decoration: none;
+    color:inherit;
+  }
+
+  input:focus,button:focus{
+    outline: none;
+  }
+
+  .nuxt{
+    flex: 1;
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  .page{
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 576px) {
+    .page{
+      flex-direction: column-reverse;
+    }
+
+    .nuxt{
+      flex: 1;
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+  }
+
+  /* 公有样式 */
+  .text-red{
+    color: #F05454;
+  }
+
+  .box-border{
+    border: 1px solid #333;
+  }
+
+  @font-face {
+    font-family: 'oppoSan-L';
+    src: url('~static/font/OPPOSans-L-2.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'oppoSan-B';
+    src: url('~static/font/OPPOSans-B-2.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+</style>
