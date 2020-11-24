@@ -20,7 +20,8 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     '@/plugins/axios',
-    { src: '~/plugins/vuex-persist', ssr: false }
+    { src: '~/plugins/vuex-persist', ssr: false },
+    '~/plugins/gtm'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -35,8 +36,20 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
-    '@nuxtjs/proxy'
+    '@nuxtjs/proxy',
+    '@nuxtjs/gtm'
   ],
+
+  gtm: {
+    enabled: true,
+    debug: false,
+
+    pageTracking: true,
+    pageViewEventName: 'nuxtRoute',
+
+    autoInit: true,
+    respectDoNotTrack: true,
+  },
 
   axios: {
     proxy: true,

@@ -1206,6 +1206,14 @@
     consola "^2.15.0"
     defu "^3.1.0"
 
+"@nuxtjs/gtm@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.npm.taobao.org/@nuxtjs/gtm/download/@nuxtjs/gtm-2.4.0.tgz#d7f5bb05b0306c564674831eab17b4e25cfdc1f6"
+  integrity sha1-1/W7BbAwbFZGdIMeqxe04lz9wfY=
+  dependencies:
+    chalk "^4.1.0"
+    semver "^7.3.2"
+
 "@nuxtjs/proxy@^2.0.1":
   version "2.0.1"
   resolved "https://registry.npm.taobao.org/@nuxtjs/proxy/download/@nuxtjs/proxy-2.0.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40nuxtjs%2Fproxy%2Fdownload%2F%40nuxtjs%2Fproxy-2.0.1.tgz#2469b6e316311aa8c60d348502a54bfe6d5536aa"

@@ -243,6 +243,14 @@ export default {
       }
     },
 
+    // 搜索标签相应的博客
+    tagBlogList(tag){
+      this.$router.push({
+        path:'/blog',
+        query:{keyword:tag}
+      })
+    },
+
     // 提醒窗口
     toggleAlert(message,isDanger=false){
       this.alert.message = message;

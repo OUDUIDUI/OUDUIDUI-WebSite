@@ -5,11 +5,13 @@
     <!--  Author  -->
     <div class="author user-select-none">{{blog.author}}</div>
     <!--  Tag  -->
-    <div class="d-flex align-items-center justify-content-center user-select-none">
+    <div class="d-flex align-items-center justify-content-center user-select-none"
+         v-if="blog.tag.length">
       <div class="tag-title">Tags：</div>
-      <div v-if="blog.tag.length"
+      <div
            class="d-flex align-items-center">
-        <div v-for="(tag,index) in blog.tag" :key="index" class="tag">
+        <div v-for="(tag,index) in blog.tag" :key="index" class="tag"
+             @click="tagBlogList(tag)">
           {{tag}}
         </div>
       </div>

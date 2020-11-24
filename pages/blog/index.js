@@ -31,8 +31,14 @@ export default {
       UICategory:''
     }
   },
-  async asyncData({$axios,error}){
-    const query = {limit:10,sort:'updatedAt'};
+  async asyncData({query,$axios,error}){
+    if(!query){
+      query = {limit:10,sort:'updatedAt'};
+    }else {
+      query.limit = 10;
+      query.sort = 'updatedAt'
+    }
+
     const method = apiList.blog.list.method;
     let url = apiList.blog.list.url + '?' + qs.stringify(query);
     const {data} = await $axios[method](url);
@@ -88,6 +94,10 @@ export default {
     checkoutNav(nav){
       this.showNavIndex = nav.id;
       this.query = {};
+      if(this.showNavIndex === 0 && this.$route.query.keyword){
+        this.$router.push('/blog')
+        this.getAllData();
+      }
     },
 
     // 获取分类目录
