@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column justify-content-between min-vh-100">
+  <div class="d-flex flex-column justify-content-between min-vh-100 app">
     <div class="d-flex page">
       <Header />
       <Nav />
@@ -36,6 +36,14 @@
 </script>
 
 <style>
+  :root {
+    --color-bg: #212529;
+    --color-white: #fff;
+    --color-black: #333;
+    --color-red: #F05454;
+    --color-shadow: 0 0 6px rgba(255,255,255,.5);
+  }
+
   html {
     font-family:
       'Source Sans Pro',
@@ -46,7 +54,6 @@
       'Helvetica Neue',
       Arial,
       sans-serif;
-    color: #333;
   }
 
   *,
@@ -74,6 +81,10 @@
     outline: none;
   }
 
+  .app{
+    background: var(--color-bg);
+  }
+
   .nuxt{
     flex: 1;
     padding-top: 80px;
@@ -98,11 +109,11 @@
 
   /* 公有样式 */
   .text-red{
-    color: #F05454;
+    color: var(--color-red) !important;
   }
 
   .box-border{
-    border: 1px solid #333;
+    border: 1px solid var(--color-white)!important;
   }
 
   @font-face {

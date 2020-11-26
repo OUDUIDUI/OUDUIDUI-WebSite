@@ -2,6 +2,7 @@
   font-size: 50px;
   font-weight: 200;
   text-align: center;
+  color: var(--color-white) !important;
 }
 
 .author{
@@ -9,9 +10,11 @@
   font-weight: 300;
   text-align: center;
   margin-bottom: 10px;
+  color: var(--color-white) !important;
 }
 
 .tag-title{
+  color: var(--color-white) !important;
   font-size: 16px;
   line-height: 25px;
   font-weight: 300;
@@ -20,7 +23,8 @@
 .tag{
   font-weight: 200;
   font-size: 16px;
-  border: 1px solid #333;
+  border: 1px solid var(--color-white);
+  color: var(--color-white) !important;
   line-height: 25px;
   padding: 0 15px;
   border-radius: 13px;
@@ -34,6 +38,10 @@
 
 .reading{
   margin-right: 25px;
+}
+
+.reading,.likes{
+  color: var(--color-white);
 }
 
 .reading img,.likes img{
@@ -52,7 +60,7 @@
 }
 
 .comment-area{
-  border: 1px solid #333;
+  border: 1px solid var(--color-white);
 }
 
 .comment-area textarea{
@@ -67,10 +75,10 @@
 
 .comment-area button{
   width: 80px;
-  background: #fff;
-  color: #333;
+  background: var(--color-bg);
+  color: var(--color-white);
   border: none;
-  border-left: 1px solid #333;
+  border-left: 1px solid var(--color-white);
   font-size: 16px;
   font-weight: 200;
 }
@@ -84,6 +92,7 @@
 }
 
 .modal-title{
+  color: var(--color-white);
   font-size: 20px;
   text-align: center;
   margin-bottom: 30px;
@@ -100,18 +109,19 @@
 .modal-btn{
   width: 100%;
   font-size: 16px;
-  background: #333;
-  color: #fff;
-  border: none;
+  background: var(--color-bg);
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
   padding: 10px;
 }
 
 .comment-list{
   margin-top: 30px;
+  color: var(--color-white);
 }
 
 .comment-item{
-  border: 1px solid #333;
+  border: 1px solid var(--color-white);
   margin-bottom: 10px;
   padding: 15px;
 }
@@ -147,7 +157,7 @@
 }
 
 .reply{
-  border-top: 1px solid rgba(0,0,0,.3);
+  border-top: 1px solid rgba(255,255,255,.8);
   padding: 14px 10px 0;
   margin-top: 14px;
 }
@@ -208,7 +218,7 @@
   }
 
   .comment-item{
-    border: 1px solid #333;
+    border: 1px solid var(--color-white);
     margin-bottom: 10px;
     padding: 15px;
   }

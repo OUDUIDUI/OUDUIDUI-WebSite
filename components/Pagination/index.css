@@ -1,3 +1,7 @@
+.num,.ellipsis{
+  color: var(--color-white);
+}
+
 .left-icon ,.right-icon{
   width: 14px;
   height: 14px;

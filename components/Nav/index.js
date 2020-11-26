@@ -14,6 +14,11 @@ export default {
   mounted() {
     this.initRouteIndex();
   },
+  watch:{
+    $route(to,from){
+      this.initRouteIndex();
+    }
+  },
   methods:{
     initRouteIndex(){
       const fullPath = this.$route.fullPath;

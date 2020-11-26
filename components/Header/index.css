@@ -11,6 +11,7 @@
 
 .slogan div{
   letter-spacing: 8px;
+  color: var(--color-white) !important;
 }
 
 .slogan div:last-child{
@@ -23,6 +24,7 @@
 
 .title span{
   font-family: 'oppoSan-B';
+  color: var(--color-white) !important;
   font-size: 80px;
   letter-spacing: 10px;
   margin-left: 10px;
@@ -71,8 +73,8 @@
     margin-bottom: 0;
     padding-top: 25px;
     padding-bottom: 30px;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
+    border-top: 1px solid var(--color-white);
+    border-bottom: 1px solid var(--color-white);
   }
 
   .slogan{

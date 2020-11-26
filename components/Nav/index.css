@@ -5,17 +5,17 @@
 .pc .line{
   width: 99vw;
   height: 1px;
-  background: #333333;
+  background: var(--color-white);
 }
 
 .pc .row div{
   padding: 18px 0;
-  border-left: 1px solid #333;
-
+  border-left: 1px solid var(--color-white);
+  color: var(--color-white);
 }
 
 .pc .row div:last-child{
-  border-right: 1px solid #333;
+  border-right: 1px solid var(--color-white);
 }
 
 .pc .row div span{
@@ -48,6 +48,8 @@
 }
 
 .modal-text{
+  padding-top: 10px;
+  color: var(--color-white);
   font-size: 21px;
   font-weight: 200;
 }
@@ -86,6 +88,7 @@
     display: none;
   }
   .nav-modal{
+    background: var(--color-bg);
     position: fixed;
     top: 0;
     bottom: 0;
@@ -103,6 +106,7 @@
   .nav-modal div{
     padding: 10px 0 10px 10px;
     letter-spacing: 10px;
+    color: var(--color-white);
   }
 
   .mobile .left img{
@@ -116,7 +120,7 @@
     padding-left: 15px;
     padding-top: 30px;
     padding-bottom: 30px;
-    border-left: 1px solid #333;
+    border-left: 1px solid var(--color-white);
     z-index: 999;
     transition: all .8s ease-in-out;
   }
@@ -126,7 +130,7 @@
   .mobile .right .line::after{
     height: 3px;
     width: 30px;
-    background: #333;
+    background: var(--color-white);
     border-radius: 2px;
     position: relative;
     transition: all .8s ease-in-out;

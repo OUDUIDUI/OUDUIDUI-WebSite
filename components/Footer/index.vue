@@ -18,11 +18,12 @@
 .line{
   width: 99vw;
   height: 1px;
-  background: #333333;
+  background: var(--color-white);
   margin-bottom: 20px;
 }
 
 p,a{
+  color: var(--color-white)!important;
   font-family: 'oppoSan-L';
   font-size: 14px;
   margin: 0;

@@ -8,17 +8,18 @@
 }
 
 .box-border{
-  border: 2px solid #333;
+  border: 2px solid var(--color-white);
 }
 
 .photo .summary{
   bottom: 0;
   right: -160px;
-  background: #fff;
+  background: var(--color-bg);
   padding: 20px 30px;
 }
 
 .photo .summary pre{
+  color: var(--color-white);
   margin: 0 !important;
   font-size: 1.2vw;
 }
@@ -28,6 +29,7 @@
 }
 
 .intro p{
+  color: var(--color-white);
   letter-spacing: 3px;
   margin-left: 3px;
 

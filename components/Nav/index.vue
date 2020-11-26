@@ -46,7 +46,7 @@
 
     <!--  MB NAV  -->
     <div class="mobile">
-      <div class="bg-white nav-modal d-flex flex-column
+      <div class="nav-modal d-flex flex-column
       justify-content-center align-items-center user-select-none"
            :class="isNavToggle ? 'active' : ''">
         <div class="text-center focus"

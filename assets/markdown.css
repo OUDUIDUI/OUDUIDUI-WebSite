@@ -1,7 +1,7 @@
 /*  Table  */
 .markdown table {
   font-size:18px;
-  color:#333;
+  color:var(--color-white);
   border-width: 1px;
   border-collapse: collapse;
   margin:20px auto;
@@ -11,11 +11,11 @@
 
 .markdown table th {
   padding: 10px 20px;
-  border: 1px solid #333;
+  border: 1px solid var(--color-white);
 }
 
 .markdown table td {
-  border: 1px solid #333;
+  border: 1px solid var(--color-white);
   padding: 10px 20px;
 }
 
@@ -28,6 +28,7 @@
   font-weight: 400;
   margin-top: 50px;
   margin-bottom: 30px;
+  color:var(--color-white);
 }
 
 .markdown h1{
@@ -53,6 +54,7 @@
 .markdown p,.markdown ul,.markdown ol{
   font-size: 18px;
   font-weight: 200;
+  color:var(--color-white);
 }
 
 .markdown ul,.markdown ol{
@@ -68,13 +70,15 @@
 .markdown pre{
   padding: 20px 30px;
   border-radius: 5px;
-  background: #333333;
-  color: #fff;
-  margin: 10px 0;
+  border: 1px solid var(--color-white);
+  background: var(--color-bg);
+  color: var(--color-white);
+  margin: 15px 0;
 }
 
 .markdown p code{
   margin: 0 5px;
+  font-weight: bold;
 }
 
 /* Image */
@@ -86,11 +90,15 @@
 
 /* Blockquote */
 .markdown blockquote {
-  color: #333;
+  color: var(--color-white);
   font-style: italic;
   margin: 10px 30px;
   padding-left: 14px;
-  border-left: 5px solid #dee2e4;
+  border-left: 5px solid var(--color-white);
+}
+
+.markdown blockquote p {
+  text-indent: 0;
 }
 
 

@@ -40,8 +40,8 @@ export default {
 .alert-main{
   min-width: 280px;
   max-width: 90%;
-  background: #fff;
-  border: 1px solid #333;
+  background: var(--color-bg);
+  border: 1px solid var(--color-white);
   position: fixed;
   top: 20px;
   padding: 15px;
@@ -49,13 +49,13 @@ export default {
   transform: translateX(-50%);
   font-size: 16px;
   text-align: center;
-  box-shadow: 3px 3px 3px rgba(0,0,0,.2);
+  box-shadow: var(--color-shadow);
   z-index: 9999;
+  color: var(--color-white);
 }
 
 .alert-main.danger{
-  background: #333;
-  color: #fff;
+  color: var(--color-red);
 }
 
 @media screen and (max-width: 576px) {
