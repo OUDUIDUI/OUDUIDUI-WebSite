@@ -2,7 +2,7 @@
   <footer class="d-flex flex-column align-items-center user-select-none footer">
     <div class="line" />
     <div class="container d-flex flex-column align-items-end">
-      <p>© 2020 ouduidui.cn, All Rights Reserved</p>
+      <p>© 2020 OUDUIDUI.CN, All Rights Reserved</p>
       <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
         粤ICP备19153295号
       </a>

@@ -24,6 +24,8 @@ export default {
       const fullPath = this.$route.fullPath;
       if(fullPath.includes('blog')){
         this.routeIndex = 1;
+      }else if(fullPath.includes('about')){
+          this.routeIndex = 3;
       }else {
         this.routeIndex = 0;
       }
@@ -32,7 +34,7 @@ export default {
     checkoutRoute(i){
       this.routeIndex = i;
       this.isNavToggle = false;
-      const paths = ['/','/blog','/','/'];
+      const paths = ['/','/blog','/','/about'];
       this.$router.push(paths[i]);
     },
 

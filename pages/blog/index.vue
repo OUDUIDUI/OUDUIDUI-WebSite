@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <!--   导航   -->
-    <BlogNav @search="search"
+    <PageNav @search="search"
              @checkoutNav="checkoutNav"
              @closeSearch="initList"
              ref="blogNav"

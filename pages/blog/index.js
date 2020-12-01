@@ -1,4 +1,4 @@
-import BlogNav from '@/components/BlogNav/index.vue'
+import PageNav from '@/components/PageNav/index.vue'
 import BlogList from '@/components/BlogList/index.vue'
 import Pagination from '@/components/Pagination/index.vue'
 import BlogCategory from '@/components/BlogCategory/index.vue'
@@ -10,7 +10,7 @@ import env from '@/utils/env'
 export default {
   name: "index",
   components:{
-    BlogNav,BlogList,Pagination,BlogCategory
+    PageNav,BlogList,Pagination,BlogCategory
   },
   computed:{
     tip(){

@@ -94,7 +94,7 @@
 
     <Modal ref="subscriptionModal">
       <div class="d-flex flex-column align-items-center justify-content-center">
-        <img src="~/static/image/nav/subscription.jpeg"
+        <img src="~/static/image/nav/subscription.jpg"
              class="qr-code"
              alt="公众号">
         <div class="modal-text">扫描关注公众号</div>

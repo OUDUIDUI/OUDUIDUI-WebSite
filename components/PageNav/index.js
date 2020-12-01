@@ -1,5 +1,5 @@
 export default {
-  name: "BlogNav",
+  name: "PageNav",
   props:{
     navs:{
       type:Array,
