@@ -1,189 +1,191 @@
-.mobile{
-  display: none;
+.mobile {
+    display: none;
 }
 
-.pc .line{
-  width: 99vw;
-  height: 1px;
-  background: var(--color-white);
+.pc .line {
+    width: 99vw;
+    height: 1px;
+    background: var(--color-white);
 }
 
-.pc .row div{
-  padding: 18px 0;
-  border-left: 1px solid var(--color-white);
-  color: var(--color-white);
+.pc .row div {
+    padding: 18px 0;
+    border-left: 1px solid var(--color-white);
+    color: var(--color-white);
 }
 
-.pc .row div:last-child{
-  border-right: 1px solid var(--color-white);
+.pc .row div:last-child {
+    border-right: 1px solid var(--color-white);
 }
 
-.pc .row div span{
-  font-weight: 300;
-  font-size: 18px;
-  letter-spacing: 10px;
-  margin-left: 10px;
+.pc .row div span {
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 10px;
+    margin-left: 10px;
 }
 
-.pc .row div img{
-  display: block;
-  width: 18px;
-  height: 18px;
+.pc .row div img {
+    display: block;
+    width: 18px;
+    height: 18px;
 }
 
-.pc .row div img:first-child{
-  margin-left: 2.5vw;
+.pc .row div img:first-child {
+    margin-left: 2.5vw;
 }
 
-.pc .row div img:last-child{
-  margin-right: 2.5vw;
+.pc .row div img:last-child {
+    margin-right: 2.5vw;
 }
 
-.focus{
-  cursor: pointer;
+.focus {
+    cursor: pointer;
 }
 
-.qr-code{
-  width: 250px;
+.qr-code {
+    width: 250px;
 }
 
-.modal-text{
-  padding-top: 10px;
-  color: var(--color-white);
-  font-size: 21px;
-  font-weight: 200;
+.modal-text {
+    padding-top: 10px;
+    color: var(--color-white);
+    font-size: 21px;
+    font-weight: 200;
 }
 
 
 @media screen and (max-width: 992px) {
-  .pc .row div img:first-child{
-    margin-left: 1.5vw;
-  }
+    .pc .row div img:first-child {
+        margin-left: 1.5vw;
+    }
 
-  .pc .row div img:last-child{
-    margin-right: 1.5vw;
-  }
+    .pc .row div img:last-child {
+        margin-right: 1.5vw;
+    }
 }
 
 @media screen and (max-width: 768px) {
-  .pc .row div img{
-    width: 14px;
-    height: 14px;
-  }
+    .pc .row div img {
+        width: 14px;
+        height: 14px;
+    }
 
-  .pc .row div img:first-child{
-    margin-left: 10px;
-  }
+    .pc .row div img:first-child {
+        margin-left: 10px;
+    }
 
-  .pc .row div img:last-child{
-    margin-right: 10px;
-  }
+    .pc .row div img:last-child {
+        margin-right: 10px;
+    }
 }
 
 @media screen and (max-width: 576px) {
-  .mobile{
-    display: block;
-  }
-  .pc{
-    display: none;
-  }
-  .nav-modal{
-    background: var(--color-bg);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0;
-    transition: all .8s ease-in-out;
-    font-size: 21px;
-    font-weight: 300;
-    padding-bottom: 120px;
-  }
+    .mobile {
+        display: block;
+    }
 
-  .nav-modal div{
-    padding: 10px 0 10px 10px;
-    letter-spacing: 10px;
-    color: var(--color-white);
-  }
+    .pc {
+        display: none;
+    }
 
-  .mobile .left img{
-    display: block;
-    width: 8vw;
-    height: 8vw;
-    margin-right: 25px;
-  }
+    .nav-modal {
+        background: var(--color-bg);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        pointer-events: none;
+        opacity: 0;
+        transition: all .8s ease-in-out;
+        font-size: 21px;
+        font-weight: 300;
+        padding-bottom: 120px;
+    }
 
-  .mobile .right{
-    padding-left: 15px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-left: 1px solid var(--color-white);
-    z-index: 999;
-    transition: all .8s ease-in-out;
-  }
+    .nav-modal div {
+        padding: 15px 0 15px 10px;
+        letter-spacing: 10px;
+        color: var(--color-white);
+    }
 
-  .mobile .right .line,
-  .mobile .right .line::before,
-  .mobile .right .line::after{
-    height: 3px;
-    width: 30px;
-    background: var(--color-white);
-    border-radius: 2px;
-    position: relative;
-    transition: all .8s ease-in-out;
-  }
+    .mobile .left img {
+        display: block;
+        width: 8vw;
+        height: 8vw;
+        margin-right: 25px;
+    }
 
-  .mobile .right .line{
-    position: relative;
-  }
+    .mobile .right {
+        padding-left: 15px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-left: 1px solid var(--color-white);
+        z-index: 999;
+        transition: all .8s ease-in-out;
+    }
 
-  .mobile .right .line::before{
-    content:'';
-    position: absolute;
-    top: -12px;
-  }
+    .mobile .right .line,
+    .mobile .right .line::before,
+    .mobile .right .line::after {
+        height: 3px;
+        width: 30px;
+        background: var(--color-white);
+        border-radius: 2px;
+        position: relative;
+        transition: all .8s ease-in-out;
+    }
 
-  .mobile .right .line::after{
-    content:'';
-    position: absolute;
-    top: 12px;
-  }
+    .mobile .right .line {
+        position: relative;
+    }
 
-  .mobile .active{
-    border-left: 1px solid transparent;
-  }
+    .mobile .right .line::before {
+        content: '';
+        position: absolute;
+        top: -12px;
+    }
 
-  .mobile .active .line{
-    background: transparent;
-  }
+    .mobile .right .line::after {
+        content: '';
+        position: absolute;
+        top: 12px;
+    }
 
-  .mobile .active .line::before{
-    top: 0;
-    transform: rotate(45deg);
-  }
+    .mobile .active {
+        border-left: 1px solid transparent;
+    }
 
-  .mobile .active .line::after{
-    top: 0;
-    transform: rotate(-45deg);
-  }
+    .mobile .active .line {
+        background: transparent;
+    }
 
-  .mobile .active.nav-modal{
-    z-index: 100;
-    pointer-events: all;
-    opacity: 1;
-  }
+    .mobile .active .line::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
 
-  .qr-code{
-    width: 150px;
-  }
+    .mobile .active .line::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
 
-  .modal-text{
-    font-size: 14px;
-    font-weight: 200;
-  }
+    .mobile .active.nav-modal {
+        z-index: 100;
+        pointer-events: all;
+        opacity: 1;
+    }
+
+    .qr-code {
+        width: 150px;
+    }
+
+    .modal-text {
+        font-size: 14px;
+        font-weight: 200;
+    }
 }
 
 

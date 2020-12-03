@@ -1,33 +1,33 @@
-.mask{
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0,0,0,.4);
-  opacity: 0;
-  z-index: -10;
-  transition: opacity .3s ease-in-out;
-  pointer-events: none;
+.mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .4);
+    opacity: 0;
+    z-index: -10;
+    transition: opacity .3s ease-in-out;
+    pointer-events: none;
 }
 
-.main{
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  padding: 25px;
-  background: var(--color-bg);
-  border: 2px solid var(--color-white);
-  opacity: 0;
+.main {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+    background: var(--color-bg);
+    border: 2px solid var(--color-white);
+    opacity: 0;
 }
 
-.active .mask{
-  pointer-events: all;
-  opacity: 1;
-  z-index: 1000;
+.active .mask {
+    pointer-events: all;
+    opacity: 1;
+    z-index: 1000;
 }
 
-.active .mask .main{
-  opacity: 1;
+.active .mask .main {
+    opacity: 1;
 }

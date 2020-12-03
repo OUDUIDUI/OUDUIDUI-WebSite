@@ -1,54 +1,54 @@
-.num,.ellipsis{
-  color: var(--color-white);
+.num, .ellipsis {
+    color: var(--color-white);
 }
 
-.left-icon ,.right-icon{
-  width: 14px;
-  height: 14px;
-  padding: 10px;
-  box-sizing: content-box;
-  cursor: pointer;
+.left-icon, .right-icon {
+    width: 14px;
+    height: 14px;
+    padding: 10px;
+    box-sizing: content-box;
+    cursor: pointer;
 }
 
-.right-icon{
-  transform: rotate(180deg);
+.right-icon {
+    transform: rotate(180deg);
 }
 
-.num,.ellipsis{
-  font-size: 20px;
-  font-weight: 200;
-  padding: 0 15px;
-  cursor: pointer;
+.num, .ellipsis {
+    font-size: 20px;
+    font-weight: 200;
+    padding: 0 15px;
+    cursor: pointer;
 }
 
-.ellipsis{
-  margin-bottom: 10px;
+.ellipsis {
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 768px) {
-  .left-icon ,.right-icon{
-    width: 12px;
-    height: 12px;
-    padding: 5px;
-  }
+    .left-icon, .right-icon {
+        width: 12px;
+        height: 12px;
+        padding: 5px;
+    }
 
-  .num,.ellipsis{
-    font-size: 16px;
-    padding: 0 8px;
-  }
+    .num, .ellipsis {
+        font-size: 16px;
+        padding: 0 8px;
+    }
 
-  .ellipsis{
-    margin-bottom: 8px;
-  }
+    .ellipsis {
+        margin-bottom: 8px;
+    }
 }
 
 @media screen and (max-width: 576px) {
-  .num,.ellipsis{
-    font-size: 12px;
-    padding: 0 6px;
-  }
+    .num, .ellipsis {
+        font-size: 12px;
+        padding: 0 6px;
+    }
 
-  .ellipsis{
-    margin-bottom: 6px;
-  }
+    .ellipsis {
+        margin-bottom: 6px;
+    }
 }

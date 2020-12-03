@@ -1,15 +1,15 @@
-.tips{
-  font-size: 14px;
-  font-weight: 200;
-  text-align: center;
+.tips {
+    font-size: 14px;
+    font-weight: 200;
+    text-align: center;
 }
 
-.category{
-  padding: 30px;
+.category {
+    padding: 30px;
 }
 
 @media screen and (max-width: 768px) {
-  .category{
-    padding: 20px;
-  }
+    .category {
+        padding: 20px;
+    }
 }

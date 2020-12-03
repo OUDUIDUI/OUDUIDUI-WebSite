@@ -1,87 +1,87 @@
-.navs-pc{
-  display: flex;
+.navs-pc {
+    display: flex;
 }
 
-.navs-mb{
-  display: none;
+.navs-mb {
+    display: none;
 }
 
-.navs-pc div{
-  font-weight: 300;
-  font-size: 18px;
-  padding: 0 30px;
-  cursor: pointer;
-  color: var(--color-white)
+.navs-pc div {
+    font-weight: 300;
+    font-size: 18px;
+    padding: 0 30px;
+    cursor: pointer;
+    color: var(--color-white)
 }
 
-.search{
-  display: flex;
-  margin-right: 30px;
+.search {
+    display: flex;
+    margin-right: 30px;
 }
 
-.search.active{
-  border-bottom: 1px solid var(--color-white);
+.search.active {
+    border-bottom: 1px solid var(--color-white);
 }
 
-.search img{
-  height: 20px;
-  width: 20px;
-  cursor: pointer;
-  margin: 5px;
+.search img {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin: 5px;
 }
 
-.search input{
-  border: none;
-  height: 20px;
-  padding: 5px;
-  font-weight: 300;
-  background: var(--color-bg);
-  color: var(--color-white) !important;
+.search input {
+    border: none;
+    height: 20px;
+    padding: 5px;
+    font-weight: 300;
+    background: var(--color-bg);
+    color: var(--color-white) !important;
 }
 
 @media screen and (max-width: 768px) {
-  .navs div{
-    font-weight: 300;
-    font-size: 18px;
-    padding-right: 0;
-  }
+    .navs div {
+        font-weight: 300;
+        font-size: 18px;
+        padding-right: 0;
+    }
 
-  .search input{
-    width: 100px;
-  }
+    .search input {
+        width: 100px;
+    }
 }
 
 @media screen and (max-width: 576px) {
-  .search,.navs-pc{
-    display: none;
-  }
+    .search, .navs-pc {
+        display: none;
+    }
 
-  .navs-mb{
-    display: block;
-    font-size: 16px;
-    font-weight: 300;
-    width: 100%;
-    padding: 0 20px;
-  }
+    .navs-mb {
+        display: block;
+        font-size: 16px;
+        font-weight: 300;
+        width: 100%;
+        padding: 0 20px;
+    }
 
-  .navs-mb p{
-    color: var(--color-white);
-  }
+    .navs-mb p {
+        color: var(--color-white);
+    }
 
-  .down-icon{
-    width: 14px;
-    height: 14px;
-    transform: rotate(-90deg);
-  }
+    .down-icon {
+        width: 14px;
+        height: 14px;
+        transform: rotate(-90deg);
+    }
 
-  .active .down-icon{
-    width: 14px;
-    height: 14px;
-    transform: rotate(90deg);
-  }
+    .active .down-icon {
+        width: 14px;
+        height: 14px;
+        transform: rotate(90deg);
+    }
 
-  .dropdown-box div{
-    padding-top: 15px;
-    color: var(--color-white);
-  }
+    .dropdown-box div {
+        padding-top: 15px;
+        color: var(--color-white);
+    }
 }

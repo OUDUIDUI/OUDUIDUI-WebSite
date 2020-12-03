@@ -1,76 +1,76 @@
-.item{
-  width: 100%;
-  padding: 20px 30px;
-  color: var(--color-white) !important;
+.item {
+    width: 100%;
+    padding: 20px 30px;
+    color: var(--color-white) !important;
 }
 
-.item:hover{
-  box-shadow: var(--color-shadow);
+.item:hover {
+    box-shadow: var(--color-shadow);
 }
 
-.header{
-  font-size: 18px;
-  font-weight: 200;
+.header {
+    font-size: 18px;
+    font-weight: 200;
 }
 
-.updated-time{
-  flex: 1;
+.updated-time {
+    flex: 1;
 }
 
-.info img{
-  width: 24px;
-  height: 24px;
-  margin-left: 30px;
-  margin-right: 10px;
+.info img {
+    width: 24px;
+    height: 24px;
+    margin-left: 30px;
+    margin-right: 10px;
 }
 
-.title{
-  font-size: 30px;
-  font-weight: 400;
-  padding-top: 10px;
-  line-height: 1.8;
+.title {
+    font-size: 30px;
+    font-weight: 400;
+    padding-top: 10px;
+    line-height: 1.8;
 }
 
-.author{
-  font-size: 18px;
-  font-weight: 200;
-  text-align: right;
+.author {
+    font-size: 18px;
+    font-weight: 200;
+    text-align: right;
 }
 
-.tag{
-  border: 1px solid var(--color-white);
-  font-size: 12px;
-  font-weight: 300;
-  padding: 0 15px;
-  line-height: 26px;
-  border-radius: 13px;
-  margin-right: 8px;
-  margin-top: 10px;
+.tag {
+    border: 1px solid var(--color-white);
+    font-size: 12px;
+    font-weight: 300;
+    padding: 0 15px;
+    line-height: 26px;
+    border-radius: 13px;
+    margin-right: 8px;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 576px) {
-  .item{
-    padding: 15px 20px;
-  }
+    .item {
+        padding: 15px 20px;
+    }
 
-  .header{
-    font-size: 14px;
-    font-weight: 200;
-  }
+    .header {
+        font-size: 14px;
+        font-weight: 200;
+    }
 
-  .info img{
-    width: 16px;
-    height: 16px;
-    margin-left: 20px;
-    margin-right: 8px;
-  }
+    .info img {
+        width: 16px;
+        height: 16px;
+        margin-left: 20px;
+        margin-right: 8px;
+    }
 
-  .title{
-    font-size: 24px;
-    line-height: 1.5;
-  }
+    .title {
+        font-size: 24px;
+        line-height: 1.5;
+    }
 
-  .author{
-    font-size: 14px;
-  }
+    .author {
+        font-size: 14px;
+    }
 }

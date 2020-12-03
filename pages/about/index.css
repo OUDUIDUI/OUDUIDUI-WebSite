@@ -1,54 +1,55 @@
-.main{
-    padding: 30px;
-    color: var(--color-white)!important;
+.main {
+    padding-left: 30px;
+    padding-right: 30px;
+    color: var(--color-white) !important;
 }
 
-.platform,.stack{
+.platform, .stack {
     margin-bottom: 30px;
     clear: both;
 }
 
-.title{
+.title {
     font-size: 24px;
     padding-bottom: 18px;
 }
 
-.content{
+.content {
     font-size: 20px;
     font-weight: 200;
 }
 
-.platform .content .item,.stack .content .item{
+.platform .content .item, .stack .content .item {
     display: inline-block !important;
     cursor: pointer;
 }
 
-.platform .content .item img,.stack .content .item img{
+.platform .content .item img, .stack .content .item img {
     display: inline-block !important;
     width: auto;
     height: 35px;
 }
 
-.stack .content .stack-title{
+.stack .content .stack-title {
 
     font-weight: normal;
     display: inline-block !important;
 }
 
-.stack .content .stack-main{
+.stack .content .stack-main {
     margin-left: 2em;
     display: inline-block !important;
 }
 
-.contact .content{
+.contact .content {
     cursor: pointer;
 }
 
-.qr-code{
+.qr-code {
     width: 250px;
 }
 
-.modal-text{
+.modal-text {
     padding-top: 10px;
     color: var(--color-white);
     font-size: 21px;
@@ -56,40 +57,41 @@
 }
 
 @media screen and (max-width: 576px) {
-    .main{
-        padding: 20px;
+    .main {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-    .platform,.stack{
+    .platform, .stack {
         margin-bottom: 18px;
         clear: both;
     }
 
-    .title{
+    .title {
         font-size: 18px;
         padding-bottom: 10px;
     }
 
-    .stack .content .stack-title{
+    .stack .content .stack-title {
         display: block !important;
         margin-top: 10px;
     }
 
-    .content{
+    .content {
         font-size: 14px;
     }
 
-    .platform .content .item img,.stack .content .item img{
+    .platform .content .item img, .stack .content .item img {
         display: inline-block !important;
         width: auto;
         height: 25px;
     }
 
-    .qr-code{
+    .qr-code {
         width: 150px;
     }
 
-    .modal-text{
+    .modal-text {
         font-size: 14px;
         font-weight: 200;
     }

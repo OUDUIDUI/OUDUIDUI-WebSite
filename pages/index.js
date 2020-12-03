@@ -1,12 +1,12 @@
 export default {
-  name: "index",
-  data(){
-    return{
-      intro:
+    name: 'index',
+    data() {
+        return {
+            intro:
 `<code>
-    I am a Frontend Developer.
+I am a Frontend Developer.
 </code>`
 
+        }
     }
-  }
 }

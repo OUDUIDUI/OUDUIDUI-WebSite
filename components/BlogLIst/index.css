@@ -1,31 +1,31 @@
-.wf-list{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 30px;
-  grid-gap: 20px;
+.wf-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+    grid-gap: 20px;
 }
 
-.blog{
-  margin-bottom: 20px;
+.blog {
+    margin-bottom: 20px;
 }
 
-.list{
-  display: none;
+.list {
+    display: none;
 }
 
 @media screen and (max-width: 992px) {
-  .wf-list{
-    display: none;
-  }
+    .wf-list {
+        display: none;
+    }
 
-  .list{
-    display: block;
-    padding: 30px;
-  }
+    .list {
+        display: block;
+        padding: 30px;
+    }
 }
 
 @media screen and (max-width: 576px) {
-  .list{
-    padding: 20px 0;
-  }
+    .list {
+        padding: 20px 0;
+    }
 }

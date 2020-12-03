@@ -1,88 +1,88 @@
-.photo{
-  transform: translateX(-80px);
+.photo {
+    transform: translateX(-80px);
 }
 
-.photo img{
-  width: 30vw;
-  height: 37.27vw;
+.photo img {
+    width: 30vw;
+    height: 37.27vw;
 }
 
-.box-border{
-  border: 2px solid var(--color-white);
+.box-border {
+    border: 2px solid var(--color-white);
 }
 
-.photo .summary{
-  bottom: 0;
-  right: -160px;
-  background: var(--color-bg);
-  padding: 20px 30px;
+.photo .summary {
+    bottom: 0;
+    right: -160px;
+    background: var(--color-bg);
+    padding: 20px 30px;
 }
 
-.photo .summary pre{
-  color: var(--color-white);
-  margin: 0 !important;
-  font-size: 1.2vw;
+.photo .summary pre {
+    color: var(--color-white);
+    margin: 0 !important;
+    font-size: 1.2vw;
 }
 
-.intro{
-  margin-top: 80px;
+.intro {
+    margin-top: 80px;
 }
 
-.intro p{
-  color: var(--color-white);
-  letter-spacing: 3px;
-  margin-left: 3px;
+.intro p {
+    color: var(--color-white);
+    letter-spacing: 3px;
+    margin-left: 3px;
 
-  font-size: 16px;
-  font-weight: 300;
-  text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
 }
 
 @media screen and (max-width: 992px) {
-  .photo{
-    transform: translateX(-60px);
-  }
+    .photo {
+        transform: translateX(-60px);
+    }
 
-  .photo .summary{
-    bottom: 0;
-    right: -120px;
-  }
+    .photo .summary {
+        bottom: 0;
+        right: -120px;
+    }
 
-  .intro p{
-    font-size: 14px;
-  }
+    .intro p {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 768px) {
-  .photo img{
-    width: 40vw;
-    height: 39.69vw;
-  }
+    .photo img {
+        width: 40vw;
+        height: 39.69vw;
+    }
 }
 
 @media screen and (max-width: 576px) {
-  .photo img{
-    width: 60vw;
-    height: 74.53vw;
-  }
+    .photo img {
+        width: 60vw;
+        height: 74.53vw;
+    }
 
-  .photo{
-    transform: translateX(-50px);
-  }
+    .photo {
+        transform: translateX(-50px);
+    }
 
-  .photo .summary pre{
-    font-size:10px;
-  }
+    .photo .summary pre {
+        font-size: 10px;
+    }
 
-  .photo .summary{
-    bottom: 0;
-    right: -100px;
-    padding: 10px;
-  }
+    .photo .summary {
+        bottom: 0;
+        right: -100px;
+        padding: 10px;
+    }
 
-  .intro p{
-    letter-spacing: 0;
-    margin-left: 0;
-    font-size: 12px;
-  }
+    .intro p {
+        letter-spacing: 0;
+        margin-left: 0;
+        font-size: 12px;
+    }
 }
