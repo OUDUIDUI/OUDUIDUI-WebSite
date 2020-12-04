@@ -1,0 +1,37 @@
+.item {
+    width: 100%;
+    padding: 30px;
+    color: var(--color-white) !important;
+}
+
+.item:hover {
+    box-shadow: var(--color-shadow);
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1;
+    padding-bottom: 20px;
+}
+
+.description {
+    font-size: 18px;
+    font-weight: 200;
+    text-align: right;
+}
+
+@media screen and (max-width: 576px) {
+    .item {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 24px;
+        padding-bottom: 10px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+}

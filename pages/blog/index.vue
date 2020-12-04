@@ -9,7 +9,7 @@
 
         <!--   博客列表   -->
         <div v-if="showNavIndex === 0">
-            <BlogList :blog-list="blogs" />
+            <WFList :list="blogs" :type="0" />
         </div>
 
         <div v-if="showNavIndex === 1" class="category">

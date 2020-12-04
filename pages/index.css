@@ -4,7 +4,7 @@
 
 .photo img {
     width: 30vw;
-    height: 37.27vw;
+    height: 35.12vw;
 }
 
 .box-border {
@@ -21,7 +21,7 @@
 .photo .summary pre {
     color: var(--color-white);
     margin: 0 !important;
-    font-size: 1.2vw;
+    font-size: 1vw;
 }
 
 .intro {
@@ -49,21 +49,21 @@
     }
 
     .intro p {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
 @media screen and (max-width: 768px) {
     .photo img {
         width: 40vw;
-        height: 39.69vw;
+        height: 46.82vw;
     }
 }
 
 @media screen and (max-width: 576px) {
     .photo img {
         width: 60vw;
-        height: 74.53vw;
+        height: 70.22vw;
     }
 
     .photo {

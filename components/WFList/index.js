@@ -1,14 +1,19 @@
 import BlogItem from '../BlogItem/index.vue'
+import ResourceItem from "../ResourceItem/index.vue"
 
 export default {
     name: 'index',
     components: {
-        BlogItem
+        BlogItem,ResourceItem
     },
     props: {
-        blogList: {
+        list: {
             type: Array,
             required: true
+        },
+        type: {
+            type: Number,
+            default: 0   // 0 -> Blog  1 -> Resource
         }
     },
     data() {
@@ -22,7 +27,7 @@ export default {
         this.initList()
     },
     watch: {
-        blogList() {
+        list() {
             this.leftList = []
             this.rightList = []
             this.heights = []
@@ -31,29 +36,29 @@ export default {
     },
     methods: {
         initList() {
-            for (let blog of this.blogList) {
-                this.waterfall(blog)
+            for (let item of this.list) {
+                this.waterfall(item)
             }
         },
 
         // 瀑布流布局
-        async waterfall(blog) {
+        async waterfall(item) {
             if (!this.leftList.length) {
-                this.leftList.push(blog)
+                this.leftList.push(item)
                 return
             }
 
             if (!this.rightList.length) {
-                this.rightList.push(blog)
+                this.rightList.push(item)
                 return
             }
 
             const isLeft = await this.getHeight()
 
             if (isLeft) {
-                this.leftList.push(blog)
+                this.leftList.push(item)
             } else {
-                this.rightList.push(blog)
+                this.rightList.push(item)
             }
         },
 
@@ -69,7 +74,7 @@ export default {
                     this.$refs.right.forEach(el => {
                         heights[1] += el.$el.offsetHeight
                     })
-                    resolve(heights[0] < heights[1])
+                    resolve(heights[0] <= heights[1])
                 }, 50)
             })
         }

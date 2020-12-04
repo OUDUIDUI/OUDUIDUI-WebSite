@@ -1,23 +1,15 @@
 import PageNav from '@/components/PageNav/index.vue'
-import BlogList from '@/components/BlogList/index.vue'
+import WFList from '@/components/WFList/index.vue'
 import Pagination from '@/components/Pagination/index.vue'
 import BlogCategory from '@/components/BlogCategory/index.vue'
 import apiList from '@/utils/apiList'
 import qs from 'qs'
 import moment from 'moment'
-import env from '@/utils/env'
 
 export default {
     name: 'index',
     components: {
-        PageNav, BlogList, Pagination, BlogCategory
-    },
-    computed: {
-        tip() {
-            if (!this.blogs.length && this.query.keyword) {
-                return '暂无搜索结果。'
-            }
-        }
+        PageNav, WFList, Pagination, BlogCategory
     },
     data() {
         return {
@@ -26,7 +18,9 @@ export default {
                 { id: 1, label: '目录' }
             ],
             showNavIndex: 0,
-            category:{}
+            category:{},
+
+            tip: ''
         }
     },
     async asyncData({ query, $axios, error }) {
@@ -52,6 +46,12 @@ export default {
         }
     },
     async mounted() {
+        if(!this.blogs.length){
+            this.tip = '暂无内容'
+        }else {
+            this.tip = ''
+        }
+
         this.category = await this.getCategoryList()
     },
     methods: {
@@ -65,6 +65,14 @@ export default {
             if (data.success) {
                 this.blogs = data.data
                 this.pagination = data.pagination
+
+                if(!this.blogs.length && this.query.keyword){
+                    this.tip = '暂无搜索结果'
+                }else if(!this.blogs.length && !this.query.keyword){
+                    this.tip = '暂无内容'
+                }else {
+                    this.tip = ''
+                }
             }
         },
         // 翻页
@@ -75,6 +83,9 @@ export default {
 
         // 搜索
         async search(keyword) {
+            this.$router.push({path:'/blog',query:{
+                    keyword
+                }})
             this.query = { keyword }
             await this.getAllData()
             this.$refs.blogNav.checkoutNav(0)
@@ -90,9 +101,16 @@ export default {
         checkoutNav(nav) {
             this.showNavIndex = nav.id
             this.query = {}
-            if (this.showNavIndex === 0 && this.$route.query.keyword) {
+            if (this.$route.query.keyword) {
                 this.$router.push('/blog')
                 this.getAllData()
+            }
+            if(this.showNavIndex === 1){
+                if(!this.category.category.length){
+                    this.tip = '暂无内容'
+                }else {
+                    this.tip = ''
+                }
             }
         },
 

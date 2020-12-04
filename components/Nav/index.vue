@@ -18,7 +18,7 @@
                     <div class="col-sm text-center focus"
                          :class="routeIndex === 2 ? 'text-red' : ''"
                          @click="checkoutRoute(2)">
-                        <span class="user-select-none">作品</span>
+                        <span class="user-select-none">导航</span>
                     </div>
                     <div class="col-sm text-center focus"
                          :class="routeIndex === 3 ? 'text-red' : ''"

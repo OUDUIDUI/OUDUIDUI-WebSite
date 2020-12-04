@@ -32,5 +32,15 @@ export default {
                 url: configApi + '/api/v1/blog/comment/{id}'
             }
         }
+    },
+    resource:{
+        list: {
+            method: 'get',
+            url: configApi + '/api/v1/resource'
+        },
+        point:{
+            method: 'put',
+            url: configApi + '/api/v1/resource/points/{id}'
+        }
     }
 }

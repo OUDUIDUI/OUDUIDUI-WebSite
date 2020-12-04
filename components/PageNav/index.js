@@ -42,7 +42,8 @@ export default {
             if (this.activeIndex !== i) {
                 this.activeIndex = i
                 this.isOpenNav = false
-                this.$emit('checkoutNav', this.navs[i])
+                this.$emit('checkoutNav', this.navs[i]);
+                this.searchAnimation(false);
             }
         },
 
