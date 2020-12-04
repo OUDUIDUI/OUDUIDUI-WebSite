@@ -15,7 +15,7 @@ export default {
         },
         toBlogDetail(id) {
             this.$router.push({
-                path: '/blog/detail',
+                path: '/blog/test',
                 query: {
                     blogId: id
                 }
