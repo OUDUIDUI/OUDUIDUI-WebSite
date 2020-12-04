@@ -27,8 +27,8 @@ export default {
         if (!query) {
             query = { limit: 10, sort: 'updatedAt' }
         } else {
-            query.limit = 10
-            query.sort = 'updatedAt'
+            const keyword = query.keyword;
+            query = { limit: 10, sort: 'updatedAt',keyword }
         }
 
         const method = apiList.blog.list.method

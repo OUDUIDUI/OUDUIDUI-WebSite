@@ -26,7 +26,8 @@
                 <img src="~/static/icon/blog/eye.svg" alt="reading">
                 <div>{{ blog.reading }}</div>
             </div>
-            <div class="likes d-flex align-items-center" @click="likes">
+            <div class="likes d-flex align-items-center"
+                 @click="likes">
                 <img src="~/static/icon/blog/like.svg" alt="likes">
                 <div>{{ blog.likes.length }}</div>
             </div>
