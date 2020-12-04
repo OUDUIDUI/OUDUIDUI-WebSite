@@ -36,9 +36,17 @@
                 <div class="title">联系我</div>
                 <div class="content" @click="contactMe">oushihao97@163.com</div>
             </div>
+
+            <!--    Subscription    -->
+            <div class="subscription">
+                <div class="title">订阅</div>
+                <div class="content">
+                    <div class="btn" @click="openSubscription">当有新的博客时请通知我</div>
+                </div>
+            </div>
         </div>
 
-        <Modal ref="subscriptionModal">
+        <Modal ref="WXModal">
             <div class="d-flex flex-column align-items-center justify-content-center">
                 <img :src="modelContent.imageUrl"
                      class="qr-code"
@@ -46,17 +54,40 @@
                 <div class="modal-text">扫描关注{{ modelContent.label }}</div>
             </div>
         </Modal>
+
+        <Modal ref="subscriptionModal">
+            <div class="check-userinfo">
+                <div class="modal-title">个人信息</div>
+                <input class="modal-input" type="text"
+                       v-model="subscriptionInfo.nickName"
+                       placeholder="请输入你的昵称">
+                <input class="modal-input" type="email"
+                       v-model="subscriptionInfo.email"
+                        placeholder="请输入你的邮箱">
+                <button class="modal-btn" @click="commit">提交</button>
+            </div>
+        </Modal>
+
+        <Alert :message="alert.message" :is-danger="alert.isDanger" ref="alert" />
     </div>
 </template>
 
 <script>
 import PageNav from '@/components/PageNav/index.vue'
-import Modal from '~/components/Modal/index.vue'
+import Modal from '@/components/Modal/index.vue'
+import qs from 'qs'
+import Alert from '@/components/Alert/index.vue'
+import apiList from '@/utils/apiList'
 
 export default {
     name: 'about',
+    head(){
+        return{
+            title: "关于OUDUIDUI",
+        }
+    },
     components: {
-        PageNav, Modal
+        PageNav, Modal,Alert
     },
     data() {
         return {
@@ -114,7 +145,16 @@ export default {
             modelContent: {
                 imageUrl: '',
                 label: ''
-            }
+            },
+
+            subscriptionInfo:{
+                nickName:'',
+                email:'',
+            },
+            alert: {
+                message: '',
+                isDanger: false
+            },
         }
     },
     methods: {
@@ -126,12 +166,49 @@ export default {
                     imageUrl: qrCode,
                     label: label
                 }
-                this.$refs.subscriptionModal.toggleModal()
+                this.$refs.WXModal.toggleModal()
             }
+        },
+
+        openSubscription(){
+            this.$refs.subscriptionModal.toggleModal()
         },
 
         contactMe() {
             location = 'mailto: oushihao97@163.com'
+        },
+
+        async commit(){
+            const reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/
+
+            if(!this.subscriptionInfo.nickName){
+                this.toggleAlert('请填写你的昵称', true)
+            }else if (!this.subscriptionInfo.email) {
+                this.toggleAlert('请填写你的邮箱', true)
+            } else if (!reg.test(this.subscriptionInfo.email)) {
+                this.toggleAlert('请输入正确的邮箱', true)
+            } else {
+                const method = apiList.blog.subscription.method;
+                const url = apiList.blog.subscription.url;
+                const {data} = await this.$axios[method](url,this.subscriptionInfo);
+                if(data.success){
+                    this.toggleAlert('订阅成功', false)
+                    this.$refs.subscriptionModal.toggleModal()
+                    this.subscriptionInfo = {
+                        email: '',
+                        nickName: ''
+                    }
+                }else {
+                    this.toggleAlert(data.message, true)
+                }
+            }
+        },
+
+        // 提醒窗口
+        toggleAlert(message, isDanger = false) {
+            this.alert.message = message
+            this.alert.isDanger = isDanger
+            this.$refs.alert.isShow = true
         }
     }
 }
@@ -145,7 +222,7 @@ export default {
     color: var(--color-white) !important;
 }
 
-.platform, .stack {
+.platform, .stack, .contact {
     margin-bottom: 30px;
     clear: both;
 }
@@ -172,8 +249,7 @@ export default {
 }
 
 .stack .content .stack-title {
-
-    font-weight: normal;
+    font-weight: 200;
     display: inline-block !important;
 }
 
@@ -190,11 +266,53 @@ export default {
     width: 250px;
 }
 
+.subscription .btn{
+    font-size: 20px;
+    font-weight: 200;
+    color: var(--color-white);
+    background: var(--color-bg);
+    border: 1px solid var(--color-white);
+    border-radius: 0;
+    padding: 8px 25px;
+}
+
+.subscription .btn:hover{
+    box-shadow: var(--color-shadow);
+}
+
 .modal-text {
     padding-top: 10px;
     color: var(--color-white);
     font-size: 21px;
     font-weight: 200;
+}
+
+.check-userinfo {
+    width: 300px;
+}
+
+.modal-title {
+    color: var(--color-white);
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.modal-input {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.modal-btn {
+    width: 100%;
+    font-size: 16px;
+    background: var(--color-bg);
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+    padding: 10px;
 }
 
 @media screen and (max-width: 576px) {
@@ -228,6 +346,11 @@ export default {
         height: 25px;
     }
 
+    .subscription .btn{
+        font-size: 14px;
+        padding: 4px 14px;
+    }
+
     .qr-code {
         width: 150px;
     }
@@ -235,6 +358,23 @@ export default {
     .modal-text {
         font-size: 14px;
         font-weight: 200;
+    }
+
+    .check-userinfo {
+        width: 220px;
+    }
+
+    .modal-title {
+        font-size: 20px;
+    }
+
+    .modal-input {
+        font-size: 16px;
+    }
+
+    .modal-btn {
+        font-size: 14px;
+        padding: 8px;
     }
 }
 

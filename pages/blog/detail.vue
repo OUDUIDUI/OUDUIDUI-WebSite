@@ -579,6 +579,19 @@ export default {
         width: 250px;
     }
 
+    .modal-title {
+        font-size: 20px;
+    }
+
+    .modal-input {
+        font-size: 16px;
+    }
+
+    .modal-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
     .comment-area textarea {
         font-size: 14px;
     }

@@ -55,7 +55,8 @@ export default {
 }
 
 .alert-main.danger {
-    color: var(--color-red);
+    color: var(--color-bg);
+    background: var(--color-white);
 }
 
 @media screen and (max-width: 576px) {

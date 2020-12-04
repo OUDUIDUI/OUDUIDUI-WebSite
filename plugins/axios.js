@@ -14,7 +14,7 @@ export default function({ $axios, error }) {
         console.log('onError', code)
         // 处理http状态码与自定义错误码
         const errCodeReg = /^[4|5][0-9](?!1)\d/g
-        if (errCodeReg.test(code + '')) {
+        if (errCodeReg.test(code + '') && code !== 400) {
             error({ statusCode: 404, message: 'Post not found' })
         }
         return err.response

@@ -76,7 +76,7 @@ a, a:link, a:visited, a:hover, a:active {
     color: inherit;
 }
 
-input:focus, button:focus {
+input:focus, button:focus,button:active {
     outline: none;
 }
 

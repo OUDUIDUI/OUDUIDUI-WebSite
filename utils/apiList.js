@@ -31,6 +31,10 @@ export default {
                 method: 'delete',
                 url: configApi + '/api/v1/blog/comment/{id}'
             }
+        },
+        subscription:{
+            method: 'post',
+            url: configApi + '/api/v1/blog/subscription'
         }
     },
     resource:{

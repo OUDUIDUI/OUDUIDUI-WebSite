@@ -36,6 +36,11 @@ import moment from 'moment'
 
 export default {
     name: 'blog',
+    head(){
+        return{
+            title: "博客",
+        }
+    },
     components: {
         PageNav, WFList, Pagination, BlogCategory
     },

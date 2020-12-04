@@ -30,6 +30,11 @@ import qs from 'qs'
 
 export default {
     name: "resource",
+    head(){
+        return{
+            title: "推荐导航",
+        }
+    },
     components:{
         WFList
     },
