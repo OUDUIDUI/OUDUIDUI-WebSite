@@ -38,8 +38,7 @@ export default {
             this.routeIndex = i
             this.isNavToggle = false
             const paths = ['/', '/blog', '/resource', '/about'];
-            const url = env.WEB_URL + paths[i];
-            window.location.href=url
+            window.location.href= env.WEB_URL + paths[i];
             // this.$router.push(paths[i])
         },
 

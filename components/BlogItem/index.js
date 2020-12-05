@@ -1,4 +1,6 @@
 import moment from 'moment'
+import env from '@/utils/env'
+import qs from 'qs'
 
 export default {
     name: 'index',
@@ -30,12 +32,7 @@ export default {
     },
     methods: {
         toBlogDetail() {
-            this.$router.push({
-                path: '/blog/detail',
-                query: {
-                    blogId: this.blog._id
-                }
-            })
+            window.location.href= env.WEB_URL + '?' + qs.stringify({blogId: this.blog._id})
         }
     }
 }
