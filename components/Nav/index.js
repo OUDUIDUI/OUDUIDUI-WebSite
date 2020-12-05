@@ -1,4 +1,5 @@
 import Modal from '~/components/Modal/index.vue'
+import env from '@/utils/env'
 
 export default {
     name: 'Nav',
@@ -36,8 +37,10 @@ export default {
         checkoutRoute(i) {
             this.routeIndex = i
             this.isNavToggle = false
-            const paths = ['/', '/blog', '/resource', '/about']
-            this.$router.push(paths[i])
+            const paths = ['/', '/blog', '/resource', '/about'];
+            const url = env.WEB_URL + paths[i];
+            window.location.href=url
+            // this.$router.push(paths[i])
         },
 
         contentMe(type) {
