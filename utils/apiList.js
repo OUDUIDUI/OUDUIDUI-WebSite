@@ -1,4 +1,6 @@
-const configApi = 'https://ouduidui.cn/ouduiduiApi'
+import env from '@/utils/env'
+
+const configApi = env.WEB_URL + '/ouduiduiApi'
 
 export default {
     blog: {

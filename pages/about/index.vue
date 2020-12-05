@@ -84,6 +84,9 @@ export default {
     head(){
         return{
             title: "关于OUDUIDUI",
+            link: [
+                { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+            ]
         }
     },
     components: {

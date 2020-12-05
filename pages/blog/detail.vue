@@ -120,7 +120,8 @@ export default {
                 {
                     rel: 'stylesheet',
                     href: 'http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css'
-                }
+                },
+                { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
             ]
         }
     },

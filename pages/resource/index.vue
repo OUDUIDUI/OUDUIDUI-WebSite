@@ -33,6 +33,9 @@ export default {
     head(){
         return{
             title: "推荐导航",
+            link: [
+                { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+            ]
         }
     },
     components:{

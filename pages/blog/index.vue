@@ -39,6 +39,9 @@ export default {
     head(){
         return{
             title: "博客",
+            link: [
+                { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+            ]
         }
     },
     components: {
