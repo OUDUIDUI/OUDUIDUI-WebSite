@@ -1,4 +1,4 @@
-const configApi = 'http://localhost:3000/ouduiduiApi'
+const configApi = 'https://ouduidui.cn/ouduiduiApi'
 
 export default {
     blog: {
