@@ -59,7 +59,7 @@ export default {
 
     proxy: {
         '/ouduiduiApi': {
-            target: 'http://127.0.0.1:5000',
+            target: 'https://api.ouduidui.cn',
             pathRewrite: {
                 '^/ouduiduiApi': '/'
             }
