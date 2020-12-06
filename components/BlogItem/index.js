@@ -32,7 +32,7 @@ export default {
     },
     methods: {
         toBlogDetail() {
-            window.location.href= env.WEB_URL + '?' + qs.stringify({blogId: this.blog._id})
+            window.location.href= env.WEB_URL + '/blog/detail?' + qs.stringify({blogId: this.blog._id})
         }
     }
 }

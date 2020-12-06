@@ -1,5 +1,4 @@
 import Modal from '~/components/Modal/index.vue'
-import env from '@/utils/env'
 
 export default {
     name: 'Nav',
@@ -38,8 +37,7 @@ export default {
             this.routeIndex = i
             this.isNavToggle = false
             const paths = ['/', '/blog', '/resource', '/about'];
-            window.location.href= env.WEB_URL + paths[i];
-            // this.$router.push(paths[i])
+            this.$router.push(paths[i])
         },
 
         contentMe(type) {

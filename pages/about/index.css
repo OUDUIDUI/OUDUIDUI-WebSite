@@ -1,0 +1,161 @@
+.main {
+    padding-left: 30px;
+    padding-right: 30px;
+    color: var(--color-white) !important;
+}
+
+.platform, .stack, .contact {
+    margin-bottom: 30px;
+    clear: both;
+}
+
+.title {
+    font-size: 24px;
+    padding-bottom: 18px;
+}
+
+.content {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.platform .content .item, .stack .content .item {
+    display: inline-block !important;
+    cursor: pointer;
+}
+
+.platform .content .item img, .stack .content .item img {
+    display: inline-block !important;
+    width: auto;
+    height: 35px;
+}
+
+.stack .content .stack-title {
+    font-weight: 200;
+    display: inline-block !important;
+}
+
+.stack .content .stack-main {
+    margin-left: 2em;
+    display: inline-block !important;
+}
+
+.contact .content {
+    cursor: pointer;
+}
+
+.qr-code {
+    width: 250px;
+}
+
+.subscription .btn{
+    font-size: 20px;
+    font-weight: 200;
+    color: var(--color-white);
+    background: var(--color-bg);
+    border: 1px solid var(--color-white);
+    border-radius: 0;
+    padding: 8px 25px;
+}
+
+.subscription .btn:hover{
+    box-shadow: var(--color-shadow);
+}
+
+.modal-text {
+    padding-top: 10px;
+    color: var(--color-white);
+    font-size: 21px;
+    font-weight: 200;
+}
+
+.check-userinfo {
+    width: 300px;
+}
+
+.modal-title {
+    color: var(--color-white);
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.modal-input {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.modal-btn {
+    width: 100%;
+    font-size: 16px;
+    background: var(--color-bg);
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+    padding: 10px;
+}
+
+@media screen and (max-width: 576px) {
+    .main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .platform, .stack {
+        margin-bottom: 18px;
+        clear: both;
+    }
+
+    .title {
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+
+    .stack .content .stack-title {
+        display: block !important;
+        margin-top: 10px;
+    }
+
+    .content {
+        font-size: 14px;
+    }
+
+    .platform .content .item img, .stack .content .item img {
+        display: inline-block !important;
+        width: auto;
+        height: 25px;
+    }
+
+    .subscription .btn{
+        font-size: 14px;
+        padding: 4px 14px;
+    }
+
+    .qr-code {
+        width: 150px;
+    }
+
+    .modal-text {
+        font-size: 14px;
+        font-weight: 200;
+    }
+
+    .check-userinfo {
+        width: 220px;
+    }
+
+    .modal-title {
+        font-size: 20px;
+    }
+
+    .modal-input {
+        font-size: 16px;
+    }
+
+    .modal-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

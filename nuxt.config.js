@@ -9,7 +9,7 @@ export default {
             { name: 'keywords',content:'OUDUIDUI 欧怼怼 博客 个人网站 前端 程序员 IT 设计 UI'}
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
         ]
     },
 
