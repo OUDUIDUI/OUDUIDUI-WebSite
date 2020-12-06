@@ -32,3 +32,7 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
     }
   }
 ```
+
+## 版本更新
+#### 1.0.1
+- 优化markdown显示样式

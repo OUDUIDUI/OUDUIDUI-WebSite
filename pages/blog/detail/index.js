@@ -20,13 +20,13 @@ export default {
             ],
             script: [
                 {
-                    src: 'http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js'
+                    src: 'https://cdn.bootcss.com/highlight.js/8.0/highlight.min.js'
                 }
             ],
             link: [
                 {
                     rel: 'stylesheet',
-                    href: 'http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css'
+                    href: 'https://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css'
                 }
             ]
         }

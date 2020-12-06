@@ -1,22 +1,22 @@
 /*  Table  */
 .markdown table {
-  font-size:18px;
-  color:var(--color-white);
-  border-width: 1px;
-  border-collapse: collapse;
-  margin:20px auto;
-  width: 80%;
-  font-weight: 300;
+    font-size: 18px;
+    color: var(--color-white);
+    border-width: 1px;
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 80%;
+    font-weight: 300;
 }
 
 .markdown table th {
-  padding: 10px 20px;
-  border: 1px solid var(--color-white);
+    padding: 10px 20px;
+    border: 1px solid var(--color-white);
 }
 
 .markdown table td {
-  border: 1px solid var(--color-white);
-  padding: 10px 20px;
+    border: 1px solid var(--color-white);
+    padding: 10px 20px;
 }
 
 /*  Text  */
@@ -24,81 +24,91 @@
 .markdown h2,
 .markdown h3,
 .markdown h4,
-.markdown h5{
-  font-weight: 400;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  color:var(--color-white);
+.markdown h5 {
+    font-weight: 400;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: var(--color-white);
 }
 
-.markdown h1{
-  font-size: 30px;
+.markdown h1 {
+    font-size: 30px;
 }
 
-.markdown h2{
-  font-size: 26px;
+.markdown h2 {
+    font-size: 26px;
 }
 
-.markdown h3{
-  font-size: 24px;
+.markdown h3 {
+    font-size: 24px;
 }
 
-.markdown h4{
-  font-size: 22px;
+.markdown h4 {
+    font-size: 22px;
 }
 
-.markdown h5{
-  font-size: 20px;
+.markdown h5 {
+    font-size: 20px;
 }
 
-.markdown p,.markdown ul,.markdown ol{
-  font-size: 18px;
-  font-weight: 200;
-  color:var(--color-white);
+.markdown p, .markdown ul, .markdown ol {
+    font-size: 18px;
+    font-weight: 200;
+    color: var(--color-white);
 }
 
-.markdown ul,.markdown ol{
-  list-style-position: inside;
-  padding-left: 18px;
+.markdown p {
+    text-indent: 36px;
 }
 
-.markdown p{
-  text-indent: 36px;
+.markdown ul, .markdown ol {
+    list-style-position: inside;
+    padding: 5px 0 5px 18px;
+
+}
+
+.markdown li {
+    padding: 5px 0;
+}
+
+.markdown li p {
+    display: inline-block;
+    text-indent: 0;
 }
 
 /* Code */
-.markdown pre{
-  padding: 20px 30px;
-  border-radius: 5px;
-  border: 1px solid var(--color-white);
-  background: var(--color-bg);
-  color: var(--color-white);
-  margin: 15px 0;
+.markdown pre {
+    padding: 20px 30px;
+    border-radius: 5px;
+    border: 1px solid var(--color-white);
+    background: var(--color-bg);
+    color: var(--color-white);
+    margin: 15px 0;
 }
 
-.markdown p code{
-  margin: 0 5px;
-  font-weight: bold;
+.markdown p code {
+    margin: 0 5px;
+    font-weight: bold;
 }
 
 /* Image */
-.markdown img{
-  display: block;
-  max-width: 80%;
-  margin: 10px auto;
+.markdown img {
+    display: block;
+    max-width: 80%;
+    margin: 10px auto;
 }
 
 /* Blockquote */
 .markdown blockquote {
-  color: var(--color-white);
-  font-style: italic;
-  margin: 10px 30px;
-  padding-left: 14px;
-  border-left: 5px solid var(--color-white);
+    color: var(--color-white);
+    font-style: italic;
+    margin: 10px 30px;
+    padding-left: 14px;
+    border-left: 5px solid var(--color-white);
 }
 
 .markdown blockquote p {
-  text-indent: 0;
+    text-indent: 0;
 }
 
 
@@ -109,62 +119,62 @@
 }
 
 @media screen and (max-width: 576px) {
-  .markdown table {
-    font-size:14px;
-    margin:20px auto;
-    width: 100%;
-    font-weight: 300;
-  }
+    .markdown table {
+        font-size: 14px;
+        margin: 20px auto;
+        width: 100%;
+        font-weight: 300;
+    }
 
-  .markdown h1,
-  .markdown h2,
-  .markdown h3,
-  .markdown h4,
-  .markdown h5{
-    font-weight: 400;
-    margin-top: 30px;
-    margin-bottom: 15px;
-  }
+    .markdown h1,
+    .markdown h2,
+    .markdown h3,
+    .markdown h4,
+    .markdown h5 {
+        font-weight: 400;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
 
-  .markdown h1{
-    font-size: 24px;
-  }
+    .markdown h1 {
+        font-size: 24px;
+    }
 
-  .markdown h2{
-    font-size: 22px;
-  }
+    .markdown h2 {
+        font-size: 22px;
+    }
 
-  .markdown h3{
-    font-size: 20px;
-  }
+    .markdown h3 {
+        font-size: 20px;
+    }
 
-  .markdown h4{
-    font-size: 18px;
-  }
+    .markdown h4 {
+        font-size: 18px;
+    }
 
-  .markdown h5{
-    font-size: 16px;
-  }
+    .markdown h5 {
+        font-size: 16px;
+    }
 
-  .markdown p,.markdown ul,.markdown ol{
-    font-size: 14px;
-    font-weight: 200;
-  }
+    .markdown p, .markdown ul, .markdown ol {
+        font-size: 14px;
+        font-weight: 200;
+    }
 
-  .markdown p{
-    text-indent: 28px;
-  }
+    .markdown p {
+        text-indent: 28px;
+    }
 
-  .markdown ul,.markdown ol{
-    padding-left: 14px;
-  }
+    .markdown ul, .markdown ol {
+        padding-left: 14px;
+    }
 
-  .markdown blockquote {
-    margin: 10px 10px;
-    padding-left: 0px;
-  }
+    .markdown blockquote {
+        margin: 10px 10px;
+        padding-left: 0px;
+    }
 
-  .markdown img{
-    max-width: 100%;
-  }
+    .markdown img {
+        max-width: 100%;
+    }
 }
