@@ -53,13 +53,19 @@ export default {
 
     axios: {
         proxy: true,
-        prefix: '/ouduiduiApi', // baseURL
-        credentials: true
+        // prefix: '/ouduiduiApi', // baseURL
+        // credentials: true
     },
 
     proxy: {
-        '/ouduiduiApi': {
+        '/api': {
             target: 'http://127.0.0.1:5000',
+            pathRewrite: {
+                '^/api': '/'
+            }
+        },
+        '/ouduiduiApi': {
+            target: 'http://api.ouduidui.cn',
             pathRewrite: {
                 '^/ouduiduiApi': '/'
             }
