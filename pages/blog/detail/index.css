@@ -21,15 +21,17 @@
 }
 
 .tag {
+    display: inline-block;
     font-weight: 200;
-    font-size: 16px;
+    font-size: 14px;
     border: 1px solid var(--color-white);
     color: var(--color-white) !important;
-    line-height: 25px;
-    padding: 0 15px;
-    border-radius: 13px;
+    line-height: 24px;
+    padding: 0 18px;
+    border-radius: 12px;
     margin-right: 5px;
     cursor: pointer;
+    margin-top: 5px;
 }
 
 .content {

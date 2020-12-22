@@ -11,7 +11,7 @@ export default {
     name: 'detail',
     head() {
         return {
-            title: 'OUDUIDUI - ' + this.blog.title,
+            title: this.blog.title + ' —— OUDUIDUI',
             meta: [
                 { charset: 'utf-8' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -109,12 +109,25 @@ export default {
         }
     },
     mounted() {
+        this.trackReading();
         this.userInfo = {
             email: this.email ? this.email : '',
             nickName: this.nickName ? this.nickName : ''
         }
     },
     methods: {
+        // 上报阅读量
+        async trackReading(){
+            const method = apiList.blog.trackReading.method;
+            const url = apiList.blog.trackReading.url.replace('{id}',this.blog._id);
+            const {data} = await this.$axios[method](url,{
+                'cid': this.cid
+            });
+            if(data.success){
+                this.blog.reading = data.reading;
+            }
+        },
+
         // 评论
         async comment() {
             const method = apiList.blog.comment.create.method

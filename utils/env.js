@@ -7,7 +7,7 @@ if(PATH_TYPE === 'development'){
     WEB_URL='http://localhost:3000';
 }else if(PATH_TYPE === 'production') {
     GOOGLE_TAG_MANAGER_ID = 'GTM-PJW2BR5';
-    WEB_URL='https://ouduidui.cn';
+    WEB_URL='http://ouduidui.cn';
 }
 
 export default {

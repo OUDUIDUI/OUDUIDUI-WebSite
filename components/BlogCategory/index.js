@@ -1,4 +1,6 @@
 import BlogCategory from './index.vue'
+import env from '@/utils/env'
+import qs from 'qs'
 
 export default {
     name: 'BlogCategory',
@@ -14,12 +16,9 @@ export default {
             node.isDown = !node.isDown
         },
         toBlogDetail(id) {
-            this.$router.push({
-                path: '/blog/test',
-                query: {
-                    blogId: id
-                }
-            })
+            window.open(
+                env.WEB_URL + '/blog/detail?' + qs.stringify({blogId: id}),
+                '_blank')
         }
     }
 }

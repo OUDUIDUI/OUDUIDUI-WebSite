@@ -16,6 +16,10 @@ export default {
             method: 'get',
             url: configApi + '/api/v1/blog/{id}'
         },
+        trackReading:{
+            method: 'put',
+            url: configApi + '/api/v1/blog/{id}'
+        },
         like: {
             method: 'put',
             url: configApi + '/api/v1/blog/likes/{id}'
