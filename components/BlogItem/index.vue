@@ -19,11 +19,12 @@
         <!--   博客title   -->
         <div class="title">{{ blog.title }}</div>
         <!--   博客标签   -->
-        <div class="d-flex">
+        <div class="tags">
             <div v-for="(tag,index) in blog.tag" :key="index" class="tag">
                 {{ tag }}
             </div>
         </div>
+
         <!--   博客author  -->
         <div class="author">{{ blog.author }}</div>
     </div>
