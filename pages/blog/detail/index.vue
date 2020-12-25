@@ -27,7 +27,7 @@
             <div class="likes d-flex align-items-center"
                  @click="likes">
                 <img src="~/static/icon/blog/like.svg" alt="likes">
-                <div>{{ blog.likes }}</div>
+                <div>{{ blog.likes.length }}</div>
             </div>
         </div>
 
